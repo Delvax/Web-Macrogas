@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* Colores principales */
+    --color-principal-verde: #1B8636;
+    --color-principal-rojo: #C90000;
+    --color-principal-blanco: #FFFFFF;
+    --color-principal-negro: #222222;
+
+    /* Colores de fondo */
+    --color-fondo-seccion-gris: #F5F5F5;
+    --color-fondo-seccion-verde-claro: #E6F2EA;
+    --color-fondo-seccion-rosa-claro: #FBE6E6;
+
+    /* Colores de texto y bordes */
+    --color-texto-oscuro: #4A4A4A;
+    --color-borde-claro: #DDDDDD;
+}
+
+
+/*  
+    #################################################################################################
+    #                                                                                               #
+    #                                           M E N U                                             #
+    #                                                                                               #                                                                                      
+    #################################################################################################
+*/
+
+.logotipo {
+    width: 15.625rem;
+    height: 3.125rem;
+    display: block;
+}
+
+.header-logotipo{
+    display: flex;
+    align-items: center;
+}
+.header-logotipo a{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-principal{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.navegacion{
+    display: flex;
+    
+}
+nav, ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: var(--color-principal-negro);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+
+/*  
+    #################################################################################################
+    #                                                                                               #
+    #                                     B O T O N E S                                             #
+    #                                                                                               #                                                                                      
+    #################################################################################################
+*/
+
+
+
+.boton-primario {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: var(--color-principal-negro);
+    margin: 7px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 3rem;
+
+}
+
+.boton-secundario {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    margin: 7px;
+    padding: 10px 20px;
+    border-radius:  3rem;
+    border: none;
+    font-size: 16px;
+    background-color: var(--color-principal-verde); /* Fondo verde */
+    color: var(--color-principal-blanco);
+    border: 1px solid var(--color-borde-claro); /* Borde sutil */
+    text-transform: uppercase;
+}
+
+.boton-terciario {
+    background-color: var(--color-principal-verde);
+    color: var(--color-principal-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 3rem;
+    border: 2px solid var(--color-borde-claro);
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.boton{
+    color: var(--color-principal-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 1rem;
+    border: 2px solid var(--color-borde-claro);
+    border-radius: 3rem;
+    padding: 10px 20px;
+}
+
+/* 
+    #################################################################################################
+    #                                                                                               #
+    #                                          M A I N                                              #
+    #                                   S E C T I O N - H E R O                                     #
+    #                                                                                               #                                                                                      
+    #################################################################################################
+*/
+
+main{
+    background-color: blue;
+}
+
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Mantiene el centrado vertical */
+    /* align-items: flex-start; Alinea los elementos a la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-car-gnc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:var(--color-principal-blanco);
+}
+
+.hero-section h1 {
+    color: var(--color-principal-blanco);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.hero-section p {
+    color: var(--color-principal-blanco);
+    font-size: 1.5rem;
+}
+
+
+.conteiner-hero{
+    margin-left:12rem;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - WHY CHOOSE                                   #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.why-choose-us {
+    background-color: var(--color-fondo-seccion-gris);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.why-choose-us p {
+    max-width: 80ch; 
+    line-height: 1.5;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - BENEFITS                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+
+.benefits{
+    background-color: var(--color-fondo-seccion-verde-claro);
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Izquierda pequeña, derecha más grande */
+    gap: 20px; /* Espacio entre columnas */
+    padding: 20px;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.benefits-text{
+    display: grid;
+    font-size: 1.2rem;
+    margin: 1.2rem;
+}
+
+.benefits-text h2{
+    font-weight: 400;
+    padding-top: 1.8rem;
+}
+
+/* Columna derecha con las tarjetas */
+.benefits-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: auto auto; /* 2 filas */
+    gap: 15px; /* Espacio entre tarjetas */
+    margin: 2rem;
+    font-weight:400;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+background: #dff4e4;
+padding: 20px;
+}
+
+.card i {
+    font-size: 2rem;
+    color: var(--color-principal-negro);
+    margin-bottom: 10px;
+    display: block;
+    color: var(--color-principal-verde);
+}
+
+/* 📱 Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+.benefits {
+    grid-template-columns: 1fr; /* 1 sola columna */
+}
+
+.benefits-cards {
+    grid-template-columns: 1fr; /* Tarjetas una debajo de otra */
+}
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - PARTNERS                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.partners{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Blog05.jpg'); */
+    background-color: var(--color-fondo-seccion-gris);
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    /* height: 400px; */
+}
+
+.partners-text{
+    color:var(--color-principal-negro);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.marcas img{
+    width:auto;
+    height: 50px;    
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - HOW TO START                                 #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.how-to-start{
+    background-color: var(--color-fondo-seccion-rosa-claro);
+}
+
+.how-to-start h2{
+    color:var(--color-principal-negro);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.steps{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.step{ 
+    width:350px;
+}
+
+.step h3{ 
+    display: flex;
+    justify-content: center;
+    width:350px;
+}
+
+.steps i{  
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--color-texto-oscuro);
+    margin-bottom: 25px;
+}
+
+.steps h3{
+    font-weight: 500;
+}
+
+
+/* AYUDIN */
+
+/* 📱 Responsive para iPad (horizontal y vertical) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ======= HEADER ======= */
+    .menu-principal {
+        flex-direction: column; /* El logo y la navegación en columna */
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Que no se desborde */
+        gap: 0.5rem;
+    }
+
+    .boton-primario,
+    .boton-secundario {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* ======= HERO ======= */
+    .conteiner-hero {
+        margin-left: 0; /* Evitar que se corte en iPad */
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    /* ======= BENEFITS ======= */
+    .benefits {
+        grid-template-columns: 1fr; /* Apilar contenido */
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .benefits-cards {
+        grid-template-columns: 1fr 1fr; /* Mantener 2 columnas */
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    /* ======= PARTNERS ======= */
+    .marcas {
+        flex-wrap: wrap; /* Que las marcas no se salgan de la pantalla */
+        gap: 1rem;
+    }
+
+    .marcas img {
+        height: 40px;
+    }
+
+    /* ======= HOW TO START ======= */
+    .steps {
+        flex-direction: column; /* Una debajo de la otra */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .step {
+        width: 90%; /* Ajustar al ancho de pantalla */
+        text-align: center;
+    }
+
+    /* ======= FOOTER ======= */
+    footer nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+
+
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-principal-negro);
+}
+/* Ocultamos el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícono hamburguesa oculto en escritorio */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-principal-negro);
+}
+
+/* 📱 Responsive iPad y móviles */
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block; /* Mostrar icono hamburguesa */
+    }
+
+    .navegacion {
+        display: none; /* Ocultamos menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background: var(--color-principal-blanco);
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid var(--color-borde-claro);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Cuando el checkbox está activado → mostramos el menú */
+    #menu-toggle:checked ~ .navegacion {
+        display: flex;
+    }
+}
