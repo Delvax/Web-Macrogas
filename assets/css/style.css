@@ -58,7 +58,6 @@
 
 .navegacion{
     display: flex;
-    
 }
 nav, ul {
     display: flex;
@@ -75,6 +74,90 @@ nav ul li a {
     color: var(--color-principal-negro);
     text-decoration: none;
     font-weight: 400;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-principal-verde);
+}
+/* Ocultamos el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícono hamburguesa oculto en escritorio */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-principal-verde);
+}
+
+/* 📱 Responsive iPad */
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block; /* Mostrar icono hamburguesa */
+    }
+
+    .navegacion {
+        display: none; /* Ocultamos menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background: var(--color-principal-blanco);
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid var(--color-borde-claro);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Cuando el checkbox está activado → mostramos el menú */
+    #menu-toggle:checked ~ .navegacion {
+        display: flex;
+    }
+}
+
+
+/*📱 Estilos para tablet (hasta 768px)*/
+
+@media (max-width: 768px)  {
+    .menu-principal {
+        flex-direction: column; /* Apila el logo y el menú uno encima del otro */
+        justify-content: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .logotipo {
+        width: 12rem; /* Reduce el tamaño del logo para que quepa bien */
+        height: auto;
+    }
+
+    .navegacion {
+        width: 100%; /* El menú desplegado ocupa todo el ancho */
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; /* Aumenta el espacio entre los elementos del menú */
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .boton-primario,
+    .boton-secundario {
+        width: 50%; /* Los botones ocupan la mayor parte del ancho */
+        text-align: center;
+    }
 }
 
 
@@ -150,9 +233,7 @@ nav ul li a {
     #################################################################################################
 */
 
-main{
-    background-color: blue;
-}
+
 
 .hero-section {
     min-height: 80vh;
@@ -301,7 +382,7 @@ padding: 20px;
 }
 
 .partners-text{
-    color:var(--color-principal-negro);
+    color: var(--color-principal-negro);
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -331,14 +412,13 @@ padding: 20px;
 
 .how-to-start{
     background-color: var(--color-fondo-seccion-rosa-claro);
+    padding: 2.5rem 1rem 3rem 1rem; /* Agregamos padding para un mejor espacio en móvil */
 }
 
 .how-to-start h2{
     color:var(--color-principal-negro);
     font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 2.5rem;
+    text-align: center; 
     margin-bottom: 2.5rem;
     font-weight: 700;
 }
@@ -346,165 +426,187 @@ padding: 20px;
 .steps{
     display: flex;
     justify-content: center;
-    padding-bottom: 3rem;
+    gap: 1rem; /* Agregamos espacio entre las columnas */
+    flex-wrap: wrap; 
 }
 
-.step{ 
-    width:350px;
-}
-
-.step h3{ 
+.step {
     display: flex;
-    justify-content: center;
-    width:350px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 350px; 
 }
 
 .steps i{  
     font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color:var(--color-texto-oscuro);
-    margin-bottom: 25px;
 }
 
-.steps h3{
+.step h3{ 
     font-weight: 500;
 }
 
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                      SECTION - CALL TO ACTION                                 #
+    #                                                                                               #
+    #################################################################################################
+*/
 
-/* AYUDIN */
 
-/* 📱 Responsive para iPad (horizontal y vertical) */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-    /* ======= HEADER ======= */
-    .menu-principal {
-        flex-direction: column; /* El logo y la navegación en columna */
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap; /* Que no se desborde */
-        gap: 0.5rem;
-    }
-
-    .boton-primario,
-    .boton-secundario {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    /* ======= HERO ======= */
-    .conteiner-hero {
-        margin-left: 0; /* Evitar que se corte en iPad */
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .hero-section h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-section p {
-        font-size: 1.2rem;
-    }
-
-    /* ======= BENEFITS ======= */
-    .benefits {
-        grid-template-columns: 1fr; /* Apilar contenido */
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .benefits-cards {
-        grid-template-columns: 1fr 1fr; /* Mantener 2 columnas */
-        gap: 1rem;
-        margin: 1rem 0;
-    }
-
-    /* ======= PARTNERS ======= */
-    .marcas {
-        flex-wrap: wrap; /* Que las marcas no se salgan de la pantalla */
-        gap: 1rem;
-    }
-
-    .marcas img {
-        height: 40px;
-    }
-
-    /* ======= HOW TO START ======= */
-    .steps {
-        flex-direction: column; /* Una debajo de la otra */
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .step {
-        width: 90%; /* Ajustar al ancho de pantalla */
-        text-align: center;
-    }
-
-    /* ======= FOOTER ======= */
-    footer nav ul {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
-    }
-
-    footer p {
-        text-align: center;
-    }
+.call-to-action {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    
+    padding: 3rem 15%; 
+    background-color: var(--color-fondo-seccion-gris); 
 }
 
 
+.call-to-action-text {
+    max-width: 50%;
+}
 
-/* Botón hamburguesa oculto por defecto */
-.menu-toggle {
-    display: none;
+.call-to-action h2 {
     font-size: 2rem;
-    cursor: pointer;
-    color: var(--color-principal-negro);
-}
-/* Ocultamos el checkbox */
-#menu-toggle {
-    display: none;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-/* Ícono hamburguesa oculto en escritorio */
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--color-principal-negro);
+.call-to-action p {
+    font-size: 1rem;
+    color: var(--color-texto-oscuro);
 }
 
-/* 📱 Responsive iPad y móviles */
-@media (max-width: 1024px) {
-    .menu-icon {
-        display: block; /* Mostrar icono hamburguesa */
+
+.call-to-action-button {
+    display: flex; 
+    gap: 1rem; 
+}
+
+
+.call-to-action-button a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem; 
+    border-radius: 3rem;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Botón de "Solicitar" o "Cotizar ahora!" */
+.call-to-action-button a:first-child {
+    background-color: var(--color-principal-verde);
+    color: var(--color-principal-blanco);
+}
+
+/* Botón de "Más información" */
+.call-to-action-button a:last-child {
+    background-color: transparent;
+    color: var(--color-texto-oscuro);
+    border-color: var(--color-borde-claro);
+}
+
+
+/* Media Queries para responsividad en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .call-to-action {
+        flex-direction: column; /* Apilamos los elementos en columna */
+        text-align: center; /* Centramos el texto para dispositivos móviles */
+        padding: 2rem 1rem;
+        gap: 1.5rem; /* Espacio entre el texto y los botones */
     }
 
-    .navegacion {
-        display: none; /* Ocultamos menú por defecto */
+    .call-to-action-text {
+        max-width: 100%;
+    }
+
+    .call-to-action-button {
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        background: var(--color-principal-blanco);
+        width: 100%; /* Hacemos que los botones ocupen todo el ancho */
+    }
+
+    .call-to-action-button a {
         width: 100%;
-        padding: 1rem;
-        border-top: 1px solid var(--color-borde-claro);
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    /* Cuando el checkbox está activado → mostramos el menú */
-    #menu-toggle:checked ~ .navegacion {
-        display: flex;
     }
 }
+
+
+
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                           F O O T E R                                         #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+footer {
+    background-color: var(--color-principal-blanco);
+    padding: 3rem 15%; /* Espaciado lateral para alinear con el resto del contenido */
+    color: var(--color-principal-negro);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-borde-claro); /* La línea divisoria */
+}
+
+.footer-top nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-top nav ul li {
+    list-style: none;
+}
+
+.footer-top nav a {
+    color: var(--color-principal-negro);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-media img {
+    width: 2rem;
+    height: auto;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 0.875rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: var(--color-principal-negro);
+    text-decoration: none;
+}
+
+/* para los enlaces de texto legal */
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
