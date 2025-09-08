@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 
 :root {
     /* Colores principales */
@@ -513,28 +515,7 @@ padding: 20px;
 }
 
 
-/* Media Queries para responsividad en pantallas más pequeñas */
-@media (max-width: 768px) {
-    .call-to-action {
-        flex-direction: column; /* Apilamos los elementos en columna */
-        text-align: center; /* Centramos el texto para dispositivos móviles */
-        padding: 2rem 1rem;
-        gap: 1.5rem; /* Espacio entre el texto y los botones */
-    }
 
-    .call-to-action-text {
-        max-width: 100%;
-    }
-
-    .call-to-action-button {
-        flex-direction: column;
-        width: 100%; /* Hacemos que los botones ocupen todo el ancho */
-    }
-
-    .call-to-action-button a {
-        width: 100%;
-    }
-}
 
 
 
@@ -610,3 +591,336 @@ footer {
     text-decoration: underline;
 }
 
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                      R E S P O S I V E                                        #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+/* 💻 Para Laptop 1024 */
+@media (max-width: 1024px) {
+    .menu-principal {
+        padding: 0 2rem;
+    }
+
+    .conteiner-hero {
+        margin-left: 8rem;
+    }
+
+    .benefits {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    .call-to-action {
+        padding: 3rem 8%;
+    }
+
+    footer {
+        padding: 3rem 8%;
+    }
+}
+
+/* 📱 Para Tablet */
+@media (max-width: 768px) {
+    .menu-principal {
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+
+    .logotipo {
+        width: 12rem;
+        height: auto;
+    }
+
+    .navegacion {
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .boton-primario,
+    .boton-secundario {
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+
+    .conteiner-hero {
+        margin-left: 0;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+    }
+
+    .benefits-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .benefits-cards {
+        grid-template-columns: 1fr;
+        margin: 1.5rem 0 0 0;
+    }
+
+    .partners {
+        padding: 1.5rem 1rem;
+    }
+
+    .partners-text {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .marcas {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .marcas img {
+        height: 40px;
+    }
+
+    .how-to-start {
+        padding: 2rem 1rem;
+    }
+
+    .how-to-start h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 1.5rem;
+    }
+
+    .call-to-action {
+        flex-direction: column;
+        padding: 2rem 5%;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .call-to-action-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .call-to-action-button {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .call-to-action-button a {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        padding: 2rem 5%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-top nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-social-media {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+/* 📱 Para Móviles L Grandes (425px) */
+@media (max-width: 425px) {
+    .logotipo {
+        width: 10rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+
+    /* ✅ Alinear botones verticalmente y evitar rotura */
+    .conteiner-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem; /* Usar gap para un espaciado consistente */
+    }
+
+    /* ✅ Unificar estilos de botones y evitar que el texto se corte */
+    .boton-terciario,
+    .boton {
+        width: 95%;
+        margin: 0; /* El espaciado ahora es manejado por 'gap' en el contenedor */
+        padding: 0.75rem 1rem; /* Aumentar padding vertical para que el texto no se corte */
+        font-size: 0.8rem;
+        text-align: center; /* Asegurar que el texto esté centrado */
+        transition: background-color 0.3s ease; /* Añadir transición para un hover suave */
+    }
+
+    .boton:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .why-choose-us h2,
+    .benefits-text h2,
+    .how-to-start h2,
+    .partners-text,
+    .call-to-action h2 {
+        font-size: 1.5rem;
+    }
+
+    .steps i {
+        font-size: 2.5rem;
+    }
+
+    .step h3 {
+        font-size: 1rem;
+    }
+
+    .marcas img {
+        height: 35px;
+    }
+}
+
+/* 📱 Para Móviles M Medianos (375px) */
+@media (max-width: 375px) {
+    .logotipo {
+        width: 9rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.35rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    /* ✅ Botones apilados y centrados */
+    .boton-terciario,
+    .boton {
+        width: 90%;
+        margin: 0.4rem 0;
+        font-size: 0.9rem;
+    }
+
+    .why-choose-us,
+    .benefits,
+    .partners,
+    .how-to-start,
+    .call-to-action {
+        padding: 1.5rem 0.8rem;
+    }
+
+    .step {
+        padding: 0 0.5rem;
+    }
+
+    .steps i {
+        font-size: 2.25rem;
+    }
+
+    .marcas img {
+        height: 30px;
+    }
+
+    footer {
+        padding: 1.5rem 0.8rem;
+    }
+}
+
+/* 📱 Para Móviles S Pequeños (320px) */
+@media (max-width: 320px) {
+    .logotipo {
+        width: 8rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .hero-section p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    /* ✅ Botones apilados, más pequeños y con buen espaciado */
+    .boton-terciario,
+    .boton {
+        width: 95%;
+        margin: 0.3rem 0;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .why-choose-us h2,
+    .benefits-text h2,
+    .how-to-start h2,
+    .partners-text,
+    .call-to-action h2 {
+        font-size: 1.3rem;
+    }
+
+    .steps i {
+        font-size: 2rem;
+    }
+
+    .step h3 {
+        font-size: 0.95rem;
+    }
+
+    .marcas img {
+        height: 25px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.75rem;
+    }
+}

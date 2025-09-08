@@ -1,0 +1,19 @@
+{
+  "name": "site-macrogas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delvax/Web-Macrogas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Delvax/Web-Macrogas/issues"
+  },
+  "homepage": "https://github.com/Delvax/Web-Macrogas#readme",
+  "description": ""
+}
