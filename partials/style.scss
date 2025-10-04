@@ -1,14 +1,32 @@
 //Primero siempre van los utilities 
 
-@import "./utilities/variables";
+@use  "./utilities/variables" as*;
+@use  "./utilities/maps" as*;
+@use  "./base/tipografias" as*;
 
 //Segundo los archivos base
 
-@import "./base/reset";
-@import "./base/tipografias"
+@use  "./base/reset" as*;
+
 
 //Tercero layout 
 
-//Cuarto media querys
+@use  "./components/hero" as*;
+@use  "./components/sections-home" as*;
+@use  "./components/sections-services" as*;
+
+
+//Cuarto Componentes
+
+@use  "./components/navbar" as*;
+@use  "./components/buttons" as*;
+@use  "./layout/footer" as*;
+
+//Quinto MediaQuerys
+
+@use  "./layout/media/media320" as*;
+@use  "./layout/media/media425" as*;
+@use  "./layout/media/media768" as*;
+// @use  "./layout/media/media1024" as*;
 
 

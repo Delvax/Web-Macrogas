@@ -1,0 +1,237 @@
+@use    "../utilities/variables" as*;
+@use    "../utilities/maps" as*;
+@use    "../base/tipografias" as*;
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - WHY CHOOSE                                   #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.why-choose-us {
+    background-color: map-get($colores, fondo-gris);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.why-choose-us p {
+    max-width: 80ch; 
+    line-height: 1.5;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - BENEFITS                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+
+.benefits{
+    background-color: $colorFondo-SeccionVerdeClaro;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Izquierda pequeña, derecha más grande */
+    gap: 20px; /* Espacio entre columnas */
+    padding: 20px;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+.benefits-text{
+    display: grid;
+    font-size: 1.2rem;
+    margin: 1.2rem;
+}
+
+.benefits-text h2{
+    font-weight: 400;
+    padding-top: 1.8rem;
+}
+
+/* Columna derecha con las tarjetas */
+.benefits-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas */
+    grid-template-rows: auto auto; /* 2 filas */
+    gap: 15px; /* Espacio entre tarjetas */
+    margin: 2rem;
+    font-weight:400;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card i {
+    font-size: 2rem;
+    color: $colorTitulosNegro;
+    margin-bottom: 10px;
+    display: block;
+    color: $colorPrincipalVerde;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - PARTNERS                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.partners{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Blog05.jpg'); */
+    background-color: $colorFondo-SeccionGrises;
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    /* height: 400px; */
+}
+
+.partners-text{
+    color: $colorPrincipalNegro;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.marcas img{
+    width:auto;
+    height: 50px;    
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - HOW TO START                                 #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.how-to-start{
+    background-color: $colorFondo-SeccionRosaClaro;
+    padding: 2.5rem 1rem 3rem 1rem; /* Agregamos padding para un mejor espacio en móvil */
+}
+
+.how-to-start h2{
+    color: $colorPrincipalNegro;
+    font-size: 2rem;
+    text-align: center; 
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.steps{
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Agregamos espacio entre las columnas */
+    flex-wrap: wrap; 
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    width: 350px; 
+}
+
+.steps i{  
+    font-size: 3rem;
+    color: $colorTextoOscuro;
+}
+
+.step h3{ 
+    font-weight: 500;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                      SECTION - CALL TO ACTION                                 #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+
+.call-to-action {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    
+    padding: 3rem 15%; 
+    background-color: $colorFondo-SeccionGrises; 
+}
+
+
+.call-to-action-text {
+    max-width: 50%;
+}
+
+.call-to-action h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.call-to-action p {
+    font-size: 1rem;
+    color: $colorTextoOscuro;
+}
+
+
+.call-to-action-button {
+    display: flex; 
+    gap: 1rem; 
+}
+
+
+.call-to-action-button a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem; 
+    border-radius: 3rem;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Botón de "Solicitar" o "Cotizar ahora!" */
+.call-to-action-button a:first-child {
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+}
+
+/* Botón de "Más información" */
+.call-to-action-button a:last-child {
+    background-color: transparent;
+    color: $colorTextoOscuro;
+    border-color: $colorBordeClaro;
+}

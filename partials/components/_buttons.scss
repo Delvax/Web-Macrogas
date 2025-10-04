@@ -1,0 +1,54 @@
+@use "../utilities/variables" as*;
+@use "../base/tipografias" as*;
+
+.boton-primario {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: $colorPrincipalNegro;
+    margin: 7px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid $colorBordeClaro;
+    border-radius: 3rem;
+}
+
+
+.boton-secundario {
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    margin: 7px;
+    padding: 10px 20px;
+    border-radius:  3rem;
+    border: none;
+    font-size: 16px;
+    background-color: $colorPrincipalVerde; 
+    color: $colorPrincipalBlanco;
+    border: 1px solid $colorBordeClaro; 
+    text-transform: uppercase;
+}
+
+.boton-terciario {
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 3rem;
+    border: 2px solid $colorBordeClaro;
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.boton{
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 1rem;
+    border: 2px solid $colorBordeClaro;
+    border-radius: 3rem;
+    padding: 10px 20px;
+}

@@ -1,0 +1,8 @@
+@use  "../utilities/variables" as*;
+@use  "../base/tipografias" as*;
+@use  "../utilities/maps" as*;
+
+.icono-personalizado{
+    font-size: 48px; /* O usa rem/em para mejor escalabilidad */
+    color: $colorPrincipalVerde; /* Tip: También puedes cambiar el color aquí */
+}

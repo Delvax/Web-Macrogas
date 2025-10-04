@@ -1,0 +1,26 @@
+@use  "../../utilities/variables" as*;
+@use  "../../base/tipografias" as*;
+
+/* 💻 Para Laptop 1024 */
+@media (max-width: 1024px) {
+    .menu-principal {
+        padding: 0 2rem;
+    }
+
+    .conteiner-hero {
+        margin-left: 8rem;
+    }
+
+    .benefits {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    .call-to-action {
+        padding: 3rem 8%;
+    }
+
+    footer {
+        padding: 3rem 8%;
+    }
+}
