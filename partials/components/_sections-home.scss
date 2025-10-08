@@ -1,3 +1,4 @@
+@use    "sass:map";
 @use    "../utilities/variables" as*;
 @use    "../utilities/maps" as*;
 @use    "../base/tipografias" as*;
@@ -11,7 +12,7 @@
 */
 
 .why-choose-us {
-    background-color: map-get($colores, fondo-gris);
+    background-color: map.get($colores, fondo-gris);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +42,7 @@
 
 
 .benefits{
-    background-color: $colorFondo-SeccionVerdeClaro;
+    background-color: map.get($colores, fondo-verde-claro);
     display: grid;
     grid-template-columns: 1fr 2fr; /* Izquierda pequeña, derecha más grande */
     gap: 20px; /* Espacio entre columnas */
@@ -78,7 +79,7 @@
 
 .card i {
     font-size: 2rem;
-    color: $colorTitulosNegro;
+    color: map.get($colores, titulo);
     margin-bottom: 10px;
     display: block;
     color: $colorPrincipalVerde;
@@ -95,7 +96,7 @@
 
 .partners{
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Blog05.jpg'); */
-    background-color: $colorFondo-SeccionGrises;
+    background-color: map.get($colores, fondo-gris);
     background-size: cover;
     background-position:top;
     background-repeat: no-repeat;
@@ -106,7 +107,7 @@
 }
 
 .partners-text{
-    color: $colorPrincipalNegro;
+    color: map.get($colores, titulo);
     font-size: 2rem;
     display: flex;
     justify-content: center;
@@ -135,12 +136,12 @@
 */
 
 .how-to-start{
-    background-color: $colorFondo-SeccionRosaClaro;
+    background-color: map.get($colores, fondo-rosa-claro);
     padding: 2.5rem 1rem 3rem 1rem; /* Agregamos padding para un mejor espacio en móvil */
 }
 
 .how-to-start h2{
-    color: $colorPrincipalNegro;
+    color: map.get($colores, titulo);
     font-size: 2rem;
     text-align: center; 
     margin-bottom: 2.5rem;
@@ -165,7 +166,7 @@
 
 .steps i{  
     font-size: 3rem;
-    color: $colorTextoOscuro;
+    color: map.get($colores, texto-oscuro);
 }
 
 .step h3{ 
@@ -188,7 +189,7 @@
     align-items: center; 
     
     padding: 3rem 15%; 
-    background-color: $colorFondo-SeccionGrises; 
+    background-color: map.get($colores, fondo-gris); 
 }
 
 
@@ -204,9 +205,8 @@
 
 .call-to-action p {
     font-size: 1rem;
-    color: $colorTextoOscuro;
+    color: map.get($colores, texto-oscuro);
 }
-
 
 .call-to-action-button {
     display: flex; 
@@ -225,13 +225,13 @@
 
 /* Botón de "Solicitar" o "Cotizar ahora!" */
 .call-to-action-button a:first-child {
-    background-color: $colorPrincipalVerde;
-    color: $colorPrincipalBlanco;
+    background-color: map.get($colores, verde);
+    color: map.get($colores, blanco);
 }
 
 /* Botón de "Más información" */
 .call-to-action-button a:last-child {
     background-color: transparent;
-    color: $colorTextoOscuro;
-    border-color: $colorBordeClaro;
+    color: map.get($colores, texto-oscuro);
+    border-color: map.get($colores, borde-claro); 
 }

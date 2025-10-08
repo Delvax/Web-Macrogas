@@ -266,10 +266,479 @@
 }
 
 .icono-personalizado {
-  font-size: 48px; /* O usa rem/em para mejor escalabilidad */
-  color: #1B8636; /* Tip: También puedes cambiar el color aquí */
+  font-size: 48px;
+  color: #1B8636;
 }
 
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - SERVICIOS                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+.servicios {
+  background-image: url("../../assets/img/road.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding: 3rem 15%;
+  position: relative;
+}
+
+/* Contenedor de la imagen del auto */
+.servicios-auto {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auto-imagen {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.servicios-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.servicios-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+.servicios-header p {
+  font-size: 1.2rem;
+  color: #4A4A4A;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+/* Grid de Cards */
+.servicios-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Estilos de cada Card */
+.servicio-card {
+  background-color: #FFFFFF;
+  border: 2px solid #E6F2EA;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.servicio-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.servicio-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+.servicio-text {
+  font-size: 0.95rem;
+  color: #4A4A4A;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.boton-servicio {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #222222;
+  background-color: #E6F2EA;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde-claro);
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  text-align: center;
+}
+
+.boton-servicio:hover {
+  background-color: #156b2b;
+  color: #FFFFFF;
+}
+
+/* 💻 Responsive para Laptop 1024px */
+@media (max-width: 1024px) {
+  .servicios {
+    padding: 3rem 8%;
+  }
+  .auto-imagen {
+    max-width: 700px;
+  }
+  .servicios-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* 📱 Responsive para Tablet 768px */
+@media (max-width: 768px) {
+  .servicios {
+    padding: 2.5rem 5%;
+  }
+  .auto-imagen {
+    max-width: 600px;
+  }
+  .servicios-header h2 {
+    font-size: 1.75rem;
+  }
+  .servicios-header p {
+    font-size: 0.95rem;
+  }
+  .servicios-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .servicio-img {
+    height: 180px;
+  }
+  .servicio-body {
+    padding: 1.25rem;
+  }
+  .servicio-title {
+    font-size: 1.1rem;
+  }
+  .servicio-text {
+    font-size: 0.9rem;
+  }
+}
+/* 📱 Responsive para Móviles L 425px */
+@media (max-width: 425px) {
+  .servicios {
+    padding: 2rem 5%;
+  }
+  .servicios-auto {
+    margin-bottom: 1.5rem;
+  }
+  .auto-imagen {
+    max-width: 100%;
+  }
+  .servicios-header h2 {
+    font-size: 1.5rem;
+  }
+  .servicios-header p {
+    font-size: 0.9rem;
+  }
+  .servicios-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .servicio-card {
+    max-width: 100%;
+  }
+  .servicio-img {
+    height: 200px;
+  }
+  .servicio-body {
+    padding: 1.5rem;
+  }
+  .boton-servicio {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* 📱 Responsive para Móviles M 375px */
+@media (max-width: 375px) {
+  .servicios {
+    padding: 1.75rem 4%;
+  }
+  .servicios-header {
+    margin-bottom: 2rem;
+  }
+  .servicios-header h2 {
+    font-size: 1.4rem;
+  }
+  .servicio-img {
+    height: 180px;
+  }
+  .servicio-body {
+    padding: 1.25rem;
+  }
+  .servicio-title {
+    font-size: 1.05rem;
+  }
+  .servicio-text {
+    font-size: 0.875rem;
+  }
+}
+/* 📱 Responsive para Móviles S 320px */
+@media (max-width: 320px) {
+  .servicios {
+    padding: 1.5rem 3%;
+  }
+  .servicios-header h2 {
+    font-size: 1.3rem;
+  }
+  .servicios-header p {
+    font-size: 0.85rem;
+  }
+  .servicio-img {
+    height: 160px;
+  }
+  .servicio-body {
+    padding: 1rem;
+  }
+  .servicio-title {
+    font-size: 1rem;
+  }
+  .servicio-text {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .boton-servicio {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - CARS                                         #
+    #                                                                                               #
+    #################################################################################################
+*/
+.cars-section {
+  padding: 4rem 2rem;
+  background-color: #E6F2EA;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.car-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.car-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(27, 134, 54, 0.2);
+}
+
+.car-icon {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.car-item:hover .car-icon {
+  filter: grayscale(0%);
+}
+
+.car-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1B8636;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .cars-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                              M A I N                                          #
+    #                                        SECTION - MARCAS                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                        SECTION - MARCAS                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+.marcas-section {
+  background-color: #FFFFFF;
+  padding: 3rem 10%;
+}
+
+.marcas-titulo {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.marcas-titulo h2 {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1B8636;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.marca-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 0.2rem;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid var(--color-borde-claro);
+  transition: all 0.3s ease;
+  min-height: 120px;
+}
+.marca-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(27, 134, 54, 0.15);
+  border-color: var(--color-principal-verde);
+}
+.marca-item img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+/* 💻 Responsive para Laptop 1024px */
+@media (max-width: 1024px) {
+  .marcas-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* 📱 Responsive para Tablet 768px */
+@media (max-width: 768px) {
+  .marcas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+  }
+  .marca-item {
+    padding: 1.25rem;
+    min-height: 100px;
+  }
+}
+/* 📱 Responsive para Móviles L 425px */
+@media (max-width: 425px) {
+  .marcas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+  .marca-item {
+    padding: 1rem;
+    min-height: 90px;
+  }
+  .marca-item img {
+    max-width: 110px;
+  }
+}
+/* 📱 Responsive para Móviles M 375px */
+@media (max-width: 375px) {
+  .marcas-grid {
+    gap: 0.875rem;
+  }
+  .marca-item {
+    padding: 0.875rem;
+    min-height: 85px;
+  }
+  .marca-item img {
+    max-width: 100px;
+  }
+}
+/* 📱 Responsive para Móviles S 320px */
+@media (max-width: 320px) {
+  .marcas-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .marca-item {
+    padding: 0.75rem;
+    min-height: 80px;
+  }
+  .marca-item img {
+    max-width: 90px;
+  }
+}
 .logotipo {
   width: 15.625rem;
   height: 3.125rem;
@@ -388,6 +857,289 @@ nav ul li a {
   padding: 10px 20px;
 }
 
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                             BOTONES                                           #
+    #                                       SECCION - RVICIOS                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+.boton-primario-servicios {
+  margin-top: 13.5rem;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+  color: #222222;
+  margin: 7px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+}
+
+.boton-secundario-servicios {
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+  margin: 7px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #1B8636;
+  color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  text-transform: uppercase;
+}
+
+.botones-servicios {
+  margin-top: 2.7rem;
+}
+
+.titulo-principal-h1 {
+  color: #222222;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: bold;
+}
+
+.subtitulo-principal {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.banner-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.titulo {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #43db82, #1B8636);
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.banner-titulo h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0 2rem;
+}
+
+/* 💻 Responsive para Laptop 1024px */
+@media (max-width: 1024px) {
+  .titulo {
+    height: 100px;
+  }
+  .titulo h2 {
+    font-size: 2.8rem;
+  }
+}
+/* 📱 Responsive para Tablet 768px */
+@media (max-width: 768px) {
+  .titulo {
+    height: 90px;
+  }
+  .titulo h2 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+}
+/* 📱 Responsive para Móviles L 425px */
+@media (max-width: 425px) {
+  .titulo {
+    height: 70px;
+    width: 95%;
+  }
+  .titulo h2 {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    letter-spacing: 0.5px;
+  }
+}
+/* 📱 Responsive para Móviles M 375px */
+@media (max-width: 375px) {
+  .titulo {
+    height: 65px;
+  }
+  .titulo h2 {
+    font-size: 1.3rem;
+  }
+}
+/* 📱 Responsive para Móviles S 320px */
+@media (max-width: 320px) {
+  .titulo {
+    height: 60px;
+  }
+  .titulo h2 {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+}
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CALL TO ACTION                                    #
+    #                                        VER PRODUCTOS                                          #
+    #                                                                                               #
+    #################################################################################################
+*/
+.cta-productos {
+  background-color: #C90000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 10%;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-productos-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.cta-productos-content h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.cta-productos-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 50ch;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.boton-cta-productos {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #222222;
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  border: 2px solid #222222;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+.boton-cta-productos:hover {
+  background-color: transparent;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.cta-productos-imagen {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-productos-imagen img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 968px) {
+  .cta-productos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 3rem 5%;
+    min-height: auto;
+  }
+  .cta-productos-content {
+    align-items: center;
+    text-align: center;
+  }
+  .cta-productos-content h2 {
+    font-size: 2.5rem;
+  }
+  .cta-productos-content p {
+    max-width: 100%;
+  }
+  .cta-productos-imagen {
+    justify-content: center;
+    align-items: center;
+  }
+  .cta-productos-imagen img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .cta-productos {
+    padding: 2.5rem 5%;
+  }
+  .cta-productos-content h2 {
+    font-size: 2rem;
+  }
+  .cta-productos-content p {
+    font-size: 1rem;
+  }
+  .boton-cta-productos {
+    padding: 0.85rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 425px) {
+  .cta-productos {
+    padding: 2rem 5%;
+    gap: 1.5rem;
+  }
+  .cta-productos-content h2 {
+    font-size: 1.75rem;
+  }
+  .cta-productos-content p {
+    font-size: 0.95rem;
+  }
+  .boton-cta-productos {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+  }
+}
 /*
     #################################################################################################
     #                                                                                               #

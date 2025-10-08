@@ -1,0 +1,155 @@
+@use  "sass:map";
+@use  "../utilities/variables" as*;
+@use  "../base/tipografias" as*;
+@use  "../utilities/maps" as*;
+@use "../utilities/mixins" as *;
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CALL TO ACTION                                    #
+    #                                        VER PRODUCTOS                                          #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.cta-productos {
+    background-color: map.get($colores, rojo);
+    @include grid(1fr 1fr, auto, center, center);
+    gap: 2rem;
+    padding: 4rem 10%;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-productos-content {
+    @include flex(column, center, flex-start, nowrap, 1.5rem);
+    color: map.get($colores, blanco);
+    z-index: 2;
+}
+
+.cta-productos-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: map.get($colores, blanco);
+}
+
+.cta-productos-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 50ch;
+    margin: 0;
+    color: map.get($colores, blanco);
+}
+
+.boton-cta-productos {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: map.get($colores, blanco);
+    background-color: map.get($colores, negro);
+    padding: 1rem 2.5rem;
+    border-radius: 3rem;
+    border: 2px solid map.get($colores, negro);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+
+    &:hover {
+        background-color: transparent;
+        border-color: map.get($colores, blanco);
+        color: map.get($colores, blanco);
+    }
+}
+
+.cta-productos-imagen {
+    @include flex(row, flex-end, flex-end, nowrap, 0);
+    position: relative;
+    z-index: 1;
+}
+
+.cta-productos-imagen img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    
+}
+
+// Responsive con media queries
+@media (max-width: 968px) {
+    .cta-productos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 3rem 5%;
+        min-height: auto;
+    }
+
+    .cta-productos-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-productos-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-productos-content p {
+        max-width: 100%;
+    }
+
+    .cta-productos-imagen {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta-productos-imagen img {
+        max-width: 100%;
+    }
+}
+
+// Tablet
+@media (max-width: 768px) {
+    .cta-productos {
+        padding: 2.5rem 5%;
+    }
+
+    .cta-productos-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-productos-content p {
+        font-size: 1rem;
+    }
+
+    .boton-cta-productos {
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+// Mobile
+@media (max-width: 425px) {
+    .cta-productos {
+        padding: 2rem 5%;
+        gap: 1.5rem;
+    }
+
+    .cta-productos-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-productos-content p {
+        font-size: 0.95rem;
+    }
+
+    .boton-cta-productos {
+        width: 100%;
+        text-align: center;
+        padding: 0.85rem 1.5rem;
+    }
+}

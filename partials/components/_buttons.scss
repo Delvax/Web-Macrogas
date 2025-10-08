@@ -1,11 +1,19 @@
-@use "../utilities/variables" as*;
-@use "../base/tipografias" as*;
+@use  "sass:map";
+@use  "../utilities/variables" as*;
+@use  "../base/tipografias" as*;
+@use  "../utilities/maps" as*;
+@use "../utilities/mixins" as *;
+
+
+
+
+
 
 .boton-primario {
     text-decoration: none;
     list-style: none;
     font-weight: 600;
-    color: $colorPrincipalNegro;
+    color: map.get($colores, negro);
     margin: 7px;
     padding: 10px 20px;
     border: none;
@@ -30,6 +38,7 @@
     text-transform: uppercase;
 }
 
+
 .boton-terciario {
     background-color: $colorPrincipalVerde;
     color: $colorPrincipalBlanco;
@@ -51,4 +60,46 @@
     border: 2px solid $colorBordeClaro;
     border-radius: 3rem;
     padding: 10px 20px;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                             BOTONES                                           #
+    #                                       SECCION - RVICIOS                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.boton-primario-servicios{
+    margin-top:13.5rem;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    color: map.get($colores, negro);
+    margin: 7px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border: 1px solid $colorBordeClaro;
+    border-radius: 8px;
+    
+}
+.boton-secundario-servicios{
+    text-decoration: none;
+    list-style: none;
+    font-weight: 600;
+    margin: 7px;
+    padding: 10px 20px;
+    border-radius:  8px;
+    border: none;
+    font-size: 16px;
+    background-color: $colorPrincipalVerde; 
+    color: $colorPrincipalBlanco;
+    border: 1px solid $colorBordeClaro; 
+    text-transform: uppercase;
+}
+//caja de botones
+.botones-servicios{
+    margin-top: 2.7rem;
 }

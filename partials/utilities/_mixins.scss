@@ -1,0 +1,23 @@
+// utilities/_mixins.scss
+
+@mixin flex($direction, $justify, $items, $wrap, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin grid($col, $row, $justify, $align) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+//los mixins son como funciones donde nosotros seteamos las propiedades 
+//y le vamos pasando los parametros que vayan cambiando
+//para utilizarlo hay que usarlo en un media y llamarlo como @include flex(wrap,row,center,center, 16px);

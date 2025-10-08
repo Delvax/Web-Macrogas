@@ -1,6 +1,7 @@
-@use  "../utilities/variables" as*;
-@use "../utilities/maps" as*;
-@use  "../base/tipografias" as*;
+@use "sass:map";
+@use    "../utilities/variables" as*;
+@use    "../utilities/maps" as*;
+@use    "../base/tipografias" as*;
 
 
 .hero-section {
@@ -15,17 +16,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: map-get($colores, blanco);
+    color: map.get($colores, blanco);
 }
 
 .hero-section h1 {
-    color: map-get($colores, blanco);
+    color: map.get($colores, blanco);
     font-weight: 700;
     font-size: 2rem;
 }
 
 .hero-section p {
-    color: map-get($colores, blanco);
+    color: map.get($colores, blanco);
     font-size: 1.5rem;
 }
 
@@ -33,3 +34,4 @@
 .conteiner-hero{
     margin-left:12rem;
 }
+

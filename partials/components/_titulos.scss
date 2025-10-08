@@ -1,0 +1,115 @@
+@use  "sass:map";
+@use  "../utilities/variables" as*;
+@use  "../base/tipografias" as*;
+@use  "../utilities/maps" as*;
+@use "../utilities/mixins" as *;
+
+.titulo-principal-h1 {
+            color: map.get($colores, titulo);
+            font-size: 3rem;
+            font-weight: 700;
+            font-style: bold;
+}
+
+.subtitulo-principal{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+// BANNER POLYGON
+.banner-titulo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+
+.titulo {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #43db82, #1B8636);
+            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+.banner-titulo h2 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0;
+            padding: 0 2rem;
+        }
+
+        /* 💻 Responsive para Laptop 1024px */
+        @media (max-width: 1024px) {
+            .titulo {
+                height: 100px;
+            }
+
+            .titulo h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        /* 📱 Responsive para Tablet 768px */
+        @media (max-width: 768px) {
+            .titulo {
+                height: 90px;
+            }
+
+            .titulo h2 {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* 📱 Responsive para Móviles L 425px */
+        @media (max-width: 425px) {
+            .titulo {
+                height: 70px;
+                width: 95%;
+            }
+
+            .titulo h2 {
+                font-size: 1.5rem;
+                padding: 0 1rem;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        /* 📱 Responsive para Móviles M 375px */
+        @media (max-width: 375px) {
+            .titulo {
+                height: 65px;
+            }
+
+            .titulo h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* 📱 Responsive para Móviles S 320px */
+        @media (max-width: 320px) {
+            .titulo {
+                height: 60px;
+            }
+
+            .titulo h2 {
+                font-size: 1.1rem;
+                padding: 0 0.5rem;
+            }
+        }
