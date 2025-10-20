@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>MACROGAS</title>
+</head>
+<body>
+
+    <header>
+        <div class="menu-principal">
+
+            <div class="header-logotipo">
+                <a href="index.html">
+                    <img src="../assets/img/Logotipo-Macrogas.png" class="logotipo" alt="Logotipo de la empresa">
+                </a>
+            </div>
+
+            <!-- Checkbox + Label (hamburguesa) -->
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+            </label>
+
+            <div class="navegacion">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Clientes</a></li>
+                    </ul>
+                </nav>
+
+                
+                <a href="#" class="boton-primario">Contacto</a>
+                <a href="#" class="boton-secundario">Cotizar Ahora!</a>
+                
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+<!-- 
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - Hero Section con Formulario                       #
+    #                                                                                               #
+    #################################################################################################
+-->
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="pe-lg-3 hero-content">
+                    <h1 class="display-4 fw-bold mb-5">Los mejores equipos a precio de fabrica</h1>
+                    <p class="lead mb-5">Equipos certificados, instalación profesional, cuotas fijas y post venta sin cargo.
+                        No esperes más: tu ahorro empieza en el próximo tanque</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <div class="text-primary">
+                                    <i class="fa-solid fa-shield-halved icon-hero"></i>
+                                </div>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-1 text-info-emphasis">Equipos con 1 año de garantía</h6>
+                                <p>Nuestra prioridad es la postventa asegurando maximo rendimiento de tu inversion.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex">
+                            <div class="text-primary">
+                                <i class="fa-solid fa-piggy-bank icon-hero"></i>
+                            </div>
+                            <div class="ms-3">
+                                <h6 class="mb-1 text-info-emphasis">Cuotas sin interés</h6>
+                                <p>Las mejores cuotas del mercado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <div class="card shadow-lg border border-secondary text-white text-left h-100">
+                        <div class="card-body p-4 p-xl-5 hero-form">
+                            <h2 class="pb-3 text-center title-form">Solicitá tu presupuesto hoy mismo</h2>
+                            <form>
+                                <div class="row mb-2">
+                                    <div class="col-md-6 mb-2 mb-md-0">
+                                        <label class="form-label" for="nombre">Nombre</label>
+                                        <input class="form-control" id="nombre" type="text" placeholder="Tu nombre">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="apellido">Apellidos</label>
+                                        <input class="form-control" id="apellido" type="text" placeholder="Tus apellidos">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-6 mb-2 mb-md-0">
+                                        <label class="form-label" for="email">E-mail</label>
+                                        <input class="form-control" id="email" type="email" placeholder="tu@email.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="phone">Teléfono</label>
+                                        <input class="form-control" id="phone" type="tel" placeholder="11 1234-5678">
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label" for="marca">Marca</label>
+                                    <select class="form-select" id="marca">
+                                        <option selected>-- Marca --</option>
+                                        <option value="volkswagen">Volkswagen</option>
+                                        <option value="ford">Ford</option>
+                                        <option value="chevrolet">Chevrolet</option>
+                                        <option value="toyota">Toyota</option>
+                                        <option value="renault">Renault</option>
+                                        <option value="peugeot">Peugeot</option>
+                                        <option value="fiat">Fiat</option>
+                                        <option value="honda">Honda</option>
+                                        <option value="nissan">Nissan</option>
+                                        <option value="citroen">Citroën</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-2 mb-md-0">
+                                        <label class="form-label" for="modelo">Modelo (ej: Suran)</label>
+                                        <input class="form-control" id="modelo" type="text" placeholder="Modelo">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="anio">Año (ej: 2019)</label>
+                                        <input class="form-control" id="anio" type="number" placeholder="2019" min="1990" max="2025">
+                                    </div>
+                                </div>
+                                <button class="btn btn-dark btn-lg w-100" type="submit">ENVIAR</button>
+                                
+                                <!-- Texto y tarjetas -->
+                                <div class="mt-4">
+                                    <p class="small fst-italic text-light mb-2 text-center">*Consulta por promociones tarjetas sin interés</p>
+                                    <div class="tarjetas-iconos">
+                                        <img src="../assets/img/tarjetas/visa.png" alt="Visa" class="icono-tarjeta">
+                                        <img src="../assets/img/tarjetas/mastercard.png" alt="Mastercard" class="icono-tarjeta">
+                                        <img src="../assets/img/tarjetas/banco-nacion.png" alt="Banco Nación" class="icono-tarjeta">
+                                        <img src="../assets/img/tarjetas/banco-provincia.png" alt="Banco Provincia" class="icono-tarjeta">
+                                        <img src="../assets/img/tarjetas/santander.png" alt="Santander" class="icono-tarjeta">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners con animación marquee (dirección derecha) -->
+<section class="partners">
+    <div class="marcas-marquee">
+        <div class="marcas-track">
+            <img src="../assets/img/marcas/aiv.png" alt="AIV">
+            <img src="../assets/img/marcas/axis.png" alt="Axis">
+            <img src="../assets/img/marcas/landirenzo.png" alt="Landi Renzo">
+            <img src="../assets/img/marcas/pelmag.png" alt="Pelmag">
+            <img src="../assets/img/marcas/ta.png" alt="TA">
+            <!-- Duplicado para efecto continuo sin espacios -->
+            <img src="../assets/img/marcas/aiv.png" alt="AIV">
+            <img src="../assets/img/marcas/axis.png" alt="Axis">
+            <img src="../assets/img/marcas/landirenzo.png" alt="Landi Renzo">
+            <img src="../assets/img/marcas/pelmag.png" alt="Pelmag">
+            <img src="../assets/img/marcas/ta.png" alt="TA">
+        </div>
+    </div>
+</section>
+
+<!-- Marcas de autos con animación marquee (dirección izquierda) -->
+<section class="marcas-autos-marquee">
+    <div class="autos-marquee">
+        <div class="autos-track">
+            <img src="../assets/img/marcas-de-autos/volkwagen.webp" alt="Volkswagen">
+            <img src="../assets/img/marcas-de-autos/citroen.png" alt="Citroën">
+            <img src="../assets/img/marcas-de-autos/subaru.png" alt="Subaru">
+            <img src="../assets/img/marcas-de-autos/toyota.png" alt="Toyota">
+            <img src="../assets/img/marcas-de-autos/nissan.png" alt="Nissan">
+            <img src="../assets/img/marcas-de-autos/hyundai.png" alt="Hyundai">
+            <img src="../assets/img/marcas-de-autos/mercedes.png" alt="Mercedes-Benz">
+            <img src="../assets/img/marcas-de-autos/ford.png" alt="Ford">
+            <img src="../assets/img/marcas-de-autos/renault.webp" alt="Renault">
+            <img src="../assets/img/marcas-de-autos/peugeot.jpg" alt="Peugeot">
+            <img src="../assets/img/marcas-de-autos/jeep.png" alt="Jeep">
+            <img src="../assets/img/marcas-de-autos/chevrolet.png" alt="Chevrolet">
+            <img src="../assets/img/marcas-de-autos/bmw.png" alt="BMW">
+            <img src="../assets/img/marcas-de-autos/honda.png" alt="Honda">
+            <img src="../assets/img/marcas-de-autos/audi.png" alt="Audi">
+            <!-- Duplicado para efecto continuo -->
+            <img src="../assets/img/marcas-de-autos/volkwagen.webp" alt="Volkswagen">
+            <img src="../assets/img/marcas-de-autos/citroen.png" alt="Citroën">
+            <img src="../assets/img/marcas-de-autos/subaru.png" alt="Subaru">
+            <img src="../assets/img/marcas-de-autos/toyota.png" alt="Toyota">
+            <img src="../assets/img/marcas-de-autos/nissan.png" alt="Nissan">
+            <img src="../assets/img/marcas-de-autos/hyundai.png" alt="Hyundai">
+            <img src="../assets/img/marcas-de-autos/mercedes.png" alt="Mercedes-Benz">
+            <img src="../assets/img/marcas-de-autos/ford.png" alt="Ford">
+            <img src="../assets/img/marcas-de-autos/renault.webp" alt="Renault">
+            <img src="../assets/img/marcas-de-autos/peugeot.jpg" alt="Peugeot">
+            <img src="../assets/img/marcas-de-autos/jeep.png" alt="Jeep">
+            <img src="../assets/img/marcas-de-autos/chevrolet.png" alt="Chevrolet">
+            <img src="../assets/img/marcas-de-autos/bmw.png" alt="BMW">
+            <img src="../assets/img/marcas-de-autos/honda.png" alt="Honda">
+            <img src="../assets/img/marcas-de-autos/audi.png" alt="Audi">
+        </div>
+    </div>
+</section>
+
+
+<!-- 
+    #################################################################################################
+    #                                                                                               #
+    #                                   FIN - Hero Section con Formulario                           #
+    #                                                                                               #
+    #################################################################################################
+-->
+
+<!-- 
+    
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - PRODUCTOS CILINDROS                               #
+    #                                                                                               #
+    #################################################################################################
+-->
+<!-- Imagen de flota -->
+<section class="servicios">
+    <div class="servicios-auto">
+        <img src="../assets/img/flota-productos.png" alt="Flota de Productos" class="auto-imagen">
+    </div>
+</section>
+
+<!-- Sección de Productos -->
+<section class="productos-section">
+
+    <div class="servicios-header">
+        <div class="banner-titulo">
+            <div class="titulo"> 
+                <h2>Nuestros Productos</h2>
+            </div>
+        </div>
+    </div>
+    <div class="productos-header">
+        <p>Equipos de GNC de 4ta y 5ta generación con certificación de calidad</p>
+    </div>
+
+    <div class="productos-grid">
+        <!-- Producto 1: 40 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>40LTS - PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro40lts.png" alt="Cilindro GNC 40 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">273</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">40</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">10,0</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">60</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">100</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+        <!-- Producto 2: 60 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>60LTS - PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro60lts.png" alt="Cilindro GNC 60 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">323</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">60</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">15,0</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">75</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">150</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+        <!-- Producto 3: 70 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>70LTS - PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro70lts.png" alt="Cilindro GNC 70 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">356</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">70</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">17,5</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">85</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">185</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+        <!-- ACA VA EL DE 90-->
+        <!-- Producto 6: 90 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>90LTS <br> PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro90lts.png" alt="Cilindros GNC 90 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">406</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">90</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">22,5</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">130</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">157</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+        <!-- 120 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>120 LITROS</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro120lts.png" alt="Cilindros GNC 90 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">406</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">120</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">30</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">155</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">200</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+        <!-- Producto 4: 2x28 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>2x28LTS <br> BAÚL</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro2x28lts.png" alt="Cilindros GNC 2x28 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">245</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">56</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">14,0</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">70</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">140</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+        <!-- Producto 5: 2x30 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>2x30LTS<br>BAJO CHASIS</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro-3x40lts.png" alt="Cilindros GNC 2x30 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">245</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">60</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">15,0</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">75</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">150</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+        
+
+        <!-- Producto 6: 123 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>PRUEBA <br> PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro90lts.png" alt="Cilindros GNC 90 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">273</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">90</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">22,5</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">110</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">225</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+
+                <!-- Producto 6: 123 Litros -->
+        <div class="producto-card">
+            <div class="producto-titulo">
+                <h3>PRUEBA <br> PISO</h3>
+            </div>
+            <div class="producto-imagen">
+                <img src="../assets/img/productos/cilindro90lts.png" alt="Cilindros GNC 90 Litros">
+            </div>
+            <div class="producto-specs">
+                <div class="spec-row">
+                    <span class="spec-label">Diámetro (mm)</span>
+                    <span class="spec-value">273</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Capacidad (Lts)</span>
+                    <span class="spec-value">90</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Aut. Equivalente (Lts Nafta)</span>
+                    <span class="spec-value">22,5</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Peso conjunto (Kg)</span>
+                    <span class="spec-value">110</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Autonomía (Km equivalentes)</span>
+                    <span class="spec-value">225</span>
+                </div>
+            </div>
+            <a href="#" class="boton-producto">Solicitar cotización</a>
+        </div>
+    </div>
+</section>
+<!-- 
+    
+    #################################################################################################
+    #                                                                                               #
+    #                                   FIN  - PRODUCTOS CILINDROS                                  #
+    #                                                                                               #
+    #################################################################################################
+-->
+<!-- Partners con animación marquee -->
+<section class="partners">
+    <div class="marcas-marquee">
+        <div class="marcas-track">
+            <img src="../assets/img/marcas/aiv.png" alt="AIV">
+            <img src="../assets/img/marcas/axis.png" alt="Axis">
+            <img src="../assets/img/marcas/landirenzo.png" alt="Landi Renzo">
+            <img src="../assets/img/marcas/pelmag.png" alt="Pelmag">
+            <img src="../assets/img/marcas/ta.png" alt="TA">
+            <!-- Duplicado para efecto continuo -->
+            <img src="../assets/img/marcas/aiv.png" alt="AIV">
+            <img src="../assets/img/marcas/axis.png" alt="Axis">
+            <img src="../assets/img/marcas/landirenzo.png" alt="Landi Renzo">
+            <img src="../assets/img/marcas/pelmag.png" alt="Pelmag">
+            <img src="../assets/img/marcas/ta.png" alt="TA">
+        </div>
+    </div>
+</section>
+
+<!-- 
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION  - PRODUCTOS KITS                                   #
+    #                                                                                               #
+    #################################################################################################
+-->
+
+<!-- Sección Kit 5ta Generación -->
+<section class="kit-gnc-section">
+    <div class="servicios-header">
+        <div class="banner-titulo">
+            <div class="titulo"> 
+                <h2>Kit 5ta Generación</h2>
+            </div>
+        </div>
+    </div>
+
+<div class="kit-gnc-contenido">
+
+    <div class="kit-imagen-interactiva">
+        <img src="../assets/img/productos/kitcomponentes5tagnc.jpg" alt="Kit 5ta Generación GNC" class="imagen-kit">
+
+        <!-- Puntos interactivos -->
+        <div class="punto" style="top: 15.8%; left: 62%;" data-tooltip="Reductor PPA c / electroválvula de alta presión (EVR)"></div>
+        <div class="punto" style="top: 52.5%; left: 40.2%;" data-tooltip="1a. Soporte reductor"></div>
+        <div class="punto" style="top: 52.5%; left: 34.5%;" data-tooltip="1a. Soporte de Rampa"></div>
+        <div class="punto" style="top: 30.5%; left: 79%;" data-tooltip="2: Válvula de carga SLIM con pico"></div>
+        <div class="punto" style="top: 52.5%; left: 45.3%;" data-tooltip="2a: Soporte válvulas de carga"></div>
+        <div class="punto" style="top: 52%; left: 87%;" data-tooltip="3: Computadora GNC sumergible"></div>
+        <div class="punto" style="top: 60%; left: 83%;" data-tooltip="3a: ECU – Unidad electrónica de control"></div>
+        <div class="punto" style="top: 62%; left: 75%;" data-tooltip="3b: Llave selectora de combustible"></div>
+        <div class="punto" style="top: 50%; left: 69.5%;" data-tooltip="3c: Manómetro"></div>
+        <div class="punto" style="top: 14.4%; left: 88.5%;" data-tooltip="4: Cableado"></div>
+        <div class="punto" style="top: 46.7%; left: 57.1%;" data-tooltip="5: Rampa de inyectores silenciosa"></div>
+        <div class="punto" style="top: 38.7%; left: 90.5%;" data-tooltip="6: Filtro de gas"></div>
+        <div class="punto" style="top: 32.7%; left: 19.7%;" data-tooltip="7: Caño de alta presión"></div>
+        <div class="punto" style="top: 8%; left: 28%;" data-tooltip="8: Kit de mangueras"></div>
+        <div class="punto" style="top: 46.4%; left: 14%;" data-tooltip="9: Mangueras de venteo"></div>
+        <div class="punto" style="top: 77%; left: 90.5%;" data-tooltip="10: Sensor de temperatura de reductor"></div>
+        <div class="punto" style="top: 76%; left: 44%;" data-tooltip="11: Accesorios"></div>
+    </div>
+
+    <div class="kit-intro">
+        <p>Nuestro kit de 5ta generación cuenta con tecnología de punta para una conversión segura, eficiente y completamente silenciosa. Conocé todos los componentes que hacen posible el mejor rendimiento de tu vehículo.</p>
+    </div>
+</div>
+</section>
+
+<!-- Sección Kit 4ta Generación -->
+<section class="kit-gnc-section">
+    <div class="servicios-header">
+        <div class="banner-titulo">
+            <div class="titulo"> 
+                <h2>Kit 4ta Generación</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="kit-gnc-contenido">
+        <!-- Imagen interactiva del kit -->
+        <div class="kit-imagen-interactiva">
+            <img src="../assets/img/productos/gnc-cuarta-generacion.png" alt="Kit 4ta Generación GNC" class="imagen-kit">
+
+            <!-- Puntos interactivos -->
+            <div class="punto" style="top: 24%; left: 62.5%;" data-tooltip="1: Reductor ST40"></div>
+            <div class="punto" style="top: 58%; left: 77%;" data-tooltip="2: Válvula de carga SLIM con pico ARG"></div>
+            <div class="punto" style="top: 59%; left: 67%;" data-tooltip="3: Válvula de cilindro"></div>
+            <div class="punto" style="top: 70%; left: 56.5%;" data-tooltip="4d: Manómetro"></div>
+            <div class="punto" style="top: 58%; left: 33%;" data-tooltip="5: Emulador de inyectores EMU4"></div>
+            <div class="punto" style="top: 53%; left: 4.3%;" data-tooltip="7: Mezclador"></div>
+            <div class="punto" style="top: 45.5%; left: 15.5%;" data-tooltip="8: Caño de alta presión"></div>
+            <div class="punto" style="top: 35.9%; left: 35.7%;" data-tooltip="9: Mangueras de venteo"></div>
+            <div class="punto" style="top: 18%; left: 81.5%;" data-tooltip="10: Kit de mangueras"></div>
+            <div class="punto" style="top: 38.7%; left: 77.3%;" data-tooltip="11: Soporte de reductor"></div>
+            <div class="punto" style="top: 46.7%; left: 86.5%;" data-tooltip="12: Soporte de válvula"></div>
+            <div class="punto" style="top: 55.5%; left: 93.5%;" data-tooltip="13: Bolsa de Venteo"></div>
+            <div class="punto" style="top: 86.5%; left: 16.5%;" data-tooltip="14: Bolsa de Accesorios"></div>
+            <div class="punto" style="top: 62%; left: 50.5%;" data-tooltip="4a: Módulo control XLP"></div>
+            <div class="punto" style="top: 62.5%; left: 24.5%;" data-tooltip="4b: Llave selectora de combustible"></div>
+            <div class="punto" style="top: 53%; left: 42%;" data-tooltip="4c: Motor paso a paso"></div>
+            <div class="punto" style="top: 63%; left: 44.5%;" data-tooltip="Variador de avance ARF universa"></div>
+        </div>
+                <div class="kit-intro">
+            <p>Nuestro kit de 4ta generación ofrece una solución probada y confiable para la conversión a GNC. Equipamiento de alta calidad con todos los componentes necesarios para un funcionamiento eficiente.</p>
+        </div>
+        
+    </div>
+</section>
+
+<!-- 
+    
+    #################################################################################################
+    #                                                                                               #
+    #                                   FIN  - PRODUCTOS KITS                                       #
+    #                                                                                               #
+    #################################################################################################
+-->
+
+
+</main>
+
+<footer>
+    <div class="footer-top">
+        <a href="index.html">
+            <img src="../assets/img/Logotipo-Macrogas.png" class="logotipo" alt="Logotipo de la empresa">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Clientes</a></li>
+            </ul>
+        </nav>
+        <div class="footer-social-media">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Macrogas. Todos los derechos reservados.</p>
+        <p><a href="#">Política de Privacidad</a> - <a href="#">Términos y Condiciones</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
