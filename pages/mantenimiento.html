@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Mantenimiento - MACROGAS</title>
+</head>
+<body class="mantenimiento-body">
+    <img src="../assets/img/Logotipo-Macrogas.png" class="mantenimiento-logotipo" alt="Logotipo Macrogas">
+    
+    <div class="mantenimiento-contenido">
+        <h1 class="mantenimiento-titulo">Estamos renovando el sitio web!</h1>
+        
+        <p class="mantenimiento-subtexto">Seguinos en las redes o ponete en contacto con nosotros en caso de necesitarlo</p>
+        
+        <!-- Cuenta regresiva -->
+        <div class="countdown-container">
+            <div class="countdown-box">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Segundos</span>
+            </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="social-links">
+            <a href="#" class="social-link facebook" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link instagram" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link whatsapp" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <p class="mensaje-final">¡Estaremos listos pronto!</p>
+    </div>
+
+    <script>
+        // Configurar la fecha final (7 días desde ahora)
+        const ahora = new Date().getTime();
+        const sietedías = 7 * 24 * 60 * 60 * 1000; // 7 días en milisegundos
+        const fechaFinal = ahora + sietedías;
+
+        // Actualizar la cuenta regresiva cada segundo
+        const countdown = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaFinal - ahora;
+
+            // Cálculos de tiempo
+            const días = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Mostrar con formato de dos dígitos
+            document.getElementById("days").textContent = días.toString().padStart(2, '0');
+            document.getElementById("hours").textContent = horas.toString().padStart(2, '0');
+            document.getElementById("minutes").textContent = minutos.toString().padStart(2, '0');
+            document.getElementById("seconds").textContent = segundos.toString().padStart(2, '0');
+
+            // Si la cuenta regresiva termina
+            if (distancia < 0) {
+                clearInterval(countdown);
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

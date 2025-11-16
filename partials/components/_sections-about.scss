@@ -1,0 +1,668 @@
+@use  "sass:map";
+@use  "../utilities/variables" as*;
+@use  "../base/tipografias" as*;
+@use  "../utilities/maps" as*;
+@use "../utilities/mixins" as *;
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - HERO NOSOTROS                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.hero-nosotros {
+    position: relative;
+    min-height: 80vh;
+    background-image: url('../../assets/img/taller-macrogas.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    @include flex(row, center, center, nowrap, 0);
+}
+
+.hero-nosotros-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    @include flex(row, center, center, nowrap, 0);
+}
+
+.hero-nosotros-content {
+    text-align: center;
+    color: map.get($colores, blanco);
+    padding: 3rem 2rem;
+    max-width: 1200px;
+}
+
+.hero-nosotros-titulo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: map.get($colores, blanco);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-nosotros-descripcion {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    color: map.get($colores, blanco);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Estadísticas / Counter
+.hero-nosotros-stats {
+    @include flex(row, center, center, wrap, 2rem);
+    margin-top: 4rem;
+}
+
+.stat-item {
+    @include flex(column, center, center, nowrap, 0.75rem);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    min-width: 200px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        background-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.stat-destacado {
+    background-color: map.get($colores, verde);
+    border-color: map.get($colores, verde);
+
+    &:hover {
+        background-color: darken(#1B8636, 10%);
+    }
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: map.get($colores, blanco);
+    margin-bottom: 0.5rem;
+}
+
+.stat-numero {
+    font-size: 3rem;
+    font-weight: 700;
+    color: map.get($colores, blanco);
+    line-height: 1;
+
+    &::after {
+        content: '+';
+        font-size: 2rem;
+        margin-left: 0.25rem;
+    }
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: map.get($colores, blanco);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+// Responsive
+@media (max-width: 1024px) {
+    .hero-nosotros-titulo {
+        font-size: 3rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1.2rem;
+    }
+
+    .stat-item {
+        min-width: 180px;
+        padding: 1.75rem 2rem;
+    }
+
+    .stat-numero {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-nosotros {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .hero-nosotros-titulo {
+        font-size: 2.5rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-nosotros-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 350px;
+        padding: 1.5rem 2rem;
+    }
+
+    .stat-numero {
+        font-size: 2.25rem;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-nosotros-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero-nosotros-titulo {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.25rem 1.5rem;
+        min-width: auto;
+    }
+
+    .stat-numero {
+        font-size: 2rem;
+
+        &::after {
+            font-size: 1.5rem;
+        }
+    }
+
+    .stat-label {
+        font-size: 0.875rem;
+    }
+
+    .stat-icon {
+        font-size: 1.75rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CONTADOR STATS                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.stats-section {
+    background-color: map.get($colores, fondo-gris);
+    padding: 4rem 10%;
+}
+
+.stats-grid {
+    @include grid(
+        repeat(4, 1fr),
+        auto,
+        center,
+        center
+    );
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    @include flex(column, center, center, nowrap, 0.5rem);
+    background-color: map.get($colores, blanco);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-color: map.get($colores, verde);
+    }
+}
+
+.stat-destacado {
+    background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+    
+    .stat-icon,
+    .stat-numero,
+    .stat-label {
+        color: map.get($colores, blanco);
+    }
+
+    &:hover {
+        background: linear-gradient(135deg, darken(#1B8636, 5%), darken(#1B8636, 15%));
+        border-color: darken(#1B8636, 20%);
+    }
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: map.get($colores, verde);
+    margin-bottom: 0.25rem;
+}
+
+.stat-numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: map.get($colores, negro);
+    line-height: 1;
+
+    &::after {
+        content: '+';
+        font-size: 1.75rem;
+        margin-left: 0.2rem;
+    }
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: map.get($colores, texto-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+// Responsive
+@media (max-width: 1024px) {
+    .hero-nosotros-titulo {
+        font-size: 3rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1.2rem;
+    }
+
+    .stats-section {
+        padding: 3.5rem 8%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        width: 180px;
+        height: 180px;
+        padding: 1.25rem 0.875rem;
+    }
+
+    .stat-icon {
+        font-size: 2.25rem;
+    }
+
+    .stat-numero {
+        font-size: 2.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-nosotros {
+        min-height: 50vh;
+    }
+
+    .hero-nosotros-titulo {
+        font-size: 2.5rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1.1rem;
+    }
+
+    .stats-section {
+        padding: 3rem 5%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .stat-item {
+        width: 160px;
+        height: 160px;
+        padding: 1rem 0.75rem;
+    }
+
+    .stat-numero {
+        font-size: 2rem;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-nosotros-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero-nosotros-titulo {
+        font-size: 2rem;
+    }
+
+    .hero-nosotros-descripcion {
+        font-size: 1rem;
+    }
+
+    .stats-section {
+        padding: 2.5rem 5%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stat-item {
+        width: 140px;
+        height: 140px;
+        padding: 0.875rem 0.5rem;
+    }
+
+    .stat-numero {
+        font-size: 1.75rem;
+
+        &::after {
+            font-size: 1.5rem;
+        }
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+
+    .stat-icon {
+        font-size: 1.75rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                          SECTION - PUNTOS ÚNICOS DE VALOR (PUV)                               #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.puv-section {
+    background-color: map.get($colores, blanco);
+    padding: 4rem 10%;
+}
+
+.puv-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: map.get($colores, negro);
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: map.get($colores, texto-oscuro);
+        font-weight: 400;
+    }
+}
+
+.puv-grid {
+    @include grid(
+        repeat(3, 1fr),
+        auto,
+        center,
+        stretch
+    );
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.puv-item {
+    @include flex(column, flex-start, center, nowrap, 1rem);
+    background-color: map.get($colores, fondo-gris);
+    padding: 2rem 1.75rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    max-width: 350px;
+    margin: 0 auto;
+
+    // Efecto de fondo al hover
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+        transition: height 0.4s ease;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(27, 134, 54, 0.2);
+        border-color: map.get($colores, verde);
+
+        .puv-icon {
+            background-color: map.get($colores, blanco);
+            color: map.get($colores, verde);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .puv-titulo,
+        .puv-descripcion {
+            color: map.get($colores, blanco);
+        }
+    }
+
+    // Asegurar que el contenido esté por encima del fondo
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.puv-icon {
+    @include flex(row, center, center, nowrap, 0);
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+    border-radius: 50%;
+    transition: all 0.4s ease;
+
+    i {
+        font-size: 2rem;
+        color: map.get($colores, blanco);
+    }
+}
+
+.puv-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: map.get($colores, negro);
+    margin: 0;
+    transition: color 0.4s ease;
+    line-height: 1.3;
+}
+
+.puv-descripcion {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: map.get($colores, texto-oscuro);
+    margin: 0;
+    transition: color 0.4s ease;
+}
+
+// Responsive
+@media (max-width: 1024px) {
+    .puv-section {
+        padding: 3.5rem 8%;
+    }
+
+    .puv-header h2 {
+        font-size: 2rem;
+    }
+
+    .puv-grid {
+        gap: 1.75rem;
+    }
+
+    .puv-item {
+        padding: 1.875rem 1.5rem;
+        max-width: 320px;
+    }
+
+    .puv-icon {
+        width: 65px;
+        height: 65px;
+
+        i {
+            font-size: 1.85rem;
+        }
+    }
+
+    .puv-titulo {
+        font-size: 1.2rem;
+    }
+
+    .puv-descripcion {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .puv-section {
+        padding: 3rem 5%;
+    }
+
+    .puv-header {
+        margin-bottom: 2.5rem;
+
+        h2 {
+            font-size: 1.875rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .puv-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .puv-item {
+        padding: 1.75rem 1.5rem;
+        max-width: 400px;
+    }
+
+    .puv-icon {
+        width: 60px;
+        height: 60px;
+
+        i {
+            font-size: 1.75rem;
+        }
+    }
+
+    .puv-titulo {
+        font-size: 1.2rem;
+    }
+
+    .puv-descripcion {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .puv-section {
+        padding: 2.5rem 5%;
+    }
+
+    .puv-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .puv-header p {
+        font-size: 0.95rem;
+    }
+
+    .puv-item {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .puv-icon {
+        width: 55px;
+        height: 55px;
+
+        i {
+            font-size: 1.6rem;
+        }
+    }
+
+    .puv-titulo {
+        font-size: 1.1rem;
+    }
+
+    .puv-descripcion {
+        font-size: 0.875rem;
+    }
+}

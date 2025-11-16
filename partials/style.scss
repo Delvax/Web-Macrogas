@@ -15,9 +15,8 @@
 @use  "./components/sections-home" as*;
 @use  "./components/sections-services" as*;
 @use  "./components/sections-products" as*;
-
-
-
+@use  "./components/sections-about" as*;
+@use  "./components/mantenience" as*;
 
 //Cuarto Componentes
 
@@ -26,6 +25,7 @@
 @use  "./components/titulos" as*;
 @use  "./components/call-to-action" as*;
 @use  "./layout/footer" as*;
+
 
 //Quinto MediaQuerys
 
