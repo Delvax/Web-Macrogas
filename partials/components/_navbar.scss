@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
 }
+
 .header-logotipo a{
     margin: 0px;
     padding: 0px;
@@ -20,18 +21,21 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
 }
 
 .navegacion{
     display: flex;
+    align-items: center; // ✅ CORRECTO: Alinea verticalmente nav y botones
 }
+
 nav, ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin: 0;  // ⭐ AGREGÁ ESTA LÍNEA - Elimina el margin por defecto del <ul>
+    padding: 0; // ⭐ AGREGÁ ESTA LÍNEA - Elimina el padding por defecto del <ul>
 }
 
 nav ul li {
@@ -52,6 +56,7 @@ nav ul li a {
     cursor: pointer;
     color: $colorPrincipalVerde;
 }
+
 /* Ocultamos el checkbox */
 #menu-toggle {
     display: none;

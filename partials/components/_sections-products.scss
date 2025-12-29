@@ -615,7 +615,7 @@
     @include flex(column, center, center, nowrap, 1.5rem);
     margin-top: 4rem;
     padding: 3rem;
-    background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+    background: linear-gradient(135deg, map.get($colores, verde), map.get($colores, verde));
     border-radius: 12px;
     text-align: center;
 

@@ -1310,7 +1310,7 @@
   gap: 1.5rem;
   margin-top: 4rem;
   padding: 3rem;
-  background: linear-gradient(135deg, #1B8636, rgb(18.4472049689, 91.5527950311, 36.8944099379));
+  background: linear-gradient(135deg, #1B8636, #1B8636);
   border-radius: 12px;
   text-align: center;
 }
@@ -1504,7 +1504,7 @@
   border-color: #1B8636;
 }
 .stat-destacado:hover {
-  background-color: rgb(18.4472049689, 91.5527950311, 36.8944099379);
+  background-color: #1B8636;
 }
 
 .stat-icon {
@@ -1652,7 +1652,7 @@
 }
 
 .stat-destacado {
-  background: linear-gradient(135deg, #1B8636, rgb(18.4472049689, 91.5527950311, 36.8944099379));
+  background: linear-gradient(135deg, #1B8636, #1B8636);
 }
 .stat-destacado .stat-icon,
 .stat-destacado .stat-numero,
@@ -1660,8 +1660,8 @@
   color: #FFFFFF;
 }
 .stat-destacado:hover {
-  background: linear-gradient(135deg, rgb(22.7236024845, 112.7763975155, 45.4472049689), rgb(14.1708074534, 70.3291925466, 28.3416149068));
-  border-color: rgb(9.8944099379, 49.1055900621, 19.7888198758);
+  background: linear-gradient(135deg, #1B8636, #1B8636);
+  border-color: #1B8636;
 }
 
 .stat-icon {
@@ -1852,7 +1852,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: linear-gradient(135deg, #1B8636, rgb(18.4472049689, 91.5527950311, 36.8944099379));
+  background: linear-gradient(135deg, #1B8636, #1B8636);
   transition: height 0.4s ease;
   z-index: 0;
 }
@@ -1887,7 +1887,7 @@
   gap: 0;
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #1B8636, rgb(18.4472049689, 91.5527950311, 36.8944099379));
+  background: linear-gradient(135deg, #1B8636, #1B8636);
   border-radius: 50%;
   transition: all 0.4s ease;
 }
@@ -2001,6 +2001,598 @@
   }
   .puv-descripcion {
     font-size: 0.875rem;
+  }
+}
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - HERO CASOS DE ÉXITO                               #
+    #                                                                                               #
+    #################################################################################################
+*/
+.casos-hero {
+  position: relative;
+  min-height: 60vh;
+  background-image: url("../../assets/img/surtidor-gnc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.casos-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.casos-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 3rem 2rem;
+  max-width: 900px;
+}
+
+.casos-hero-titulo {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.casos-hero-subtitulo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CARDS DE CASOS                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+.title-secion {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 2rem;
+}
+
+.casos-section {
+  background-color: #F5F5F5;
+  padding: 4rem 5%;
+}
+
+.casos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.caso-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.caso-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(27, 134, 54, 0.15);
+}
+
+.caso-perfil {
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 2px solid #E6F2EA;
+}
+
+.caso-nombre {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1B8636;
+  margin-bottom: 0.5rem;
+}
+
+.caso-profesion {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  margin-bottom: 0.25rem;
+}
+
+.caso-ubicacion {
+  font-size: 0.9rem;
+  color: #4A4A4A;
+  font-weight: 400;
+}
+
+.caso-objecion {
+  background-color: #FBE6E6;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #C90000;
+}
+.caso-objecion p {
+  font-style: italic;
+  color: #4A4A4A;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.caso-imagen {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+.caso-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.caso-card:hover .caso-imagen img {
+  transform: scale(1.05);
+}
+
+.caso-datos {
+  padding: 2rem;
+  background-color: #FFFFFF;
+}
+
+.dato-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #DDDDDD;
+}
+.dato-row:last-child {
+  border-bottom: none;
+}
+
+.dato-icono {
+  font-size: 1.5rem;
+  min-width: 2rem;
+}
+
+.dato-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.dato-valor {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.caso-testimonio {
+  background-color: #E6F2EA;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #1B8636;
+}
+.caso-testimonio p {
+  font-size: 1rem;
+  color: #4A4A4A;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CALCULADORA                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+.calculadora-section {
+  background-color: #FFFFFF;
+  padding: 4rem 5%;
+}
+
+.calculadora-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.calculadora-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.calculadora-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 0.75rem;
+}
+.calculadora-header p {
+  font-size: 1rem;
+  color: #4A4A4A;
+}
+
+.calculadora-form {
+  background-color: #F5F5F5;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+.form-group:last-of-type {
+  margin-bottom: 2.5rem;
+}
+.form-group label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 0.75rem;
+}
+.form-group label i {
+  color: #1B8636;
+  font-size: 1.25rem;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #DDDDDD;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1B8636;
+}
+
+.btn-calcular {
+  width: 100%;
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #1B8636;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+.btn-calcular:hover {
+  background-color: rgb(18.4472049689, 91.5527950311, 36.8944099379);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
+}
+.btn-calcular i {
+  font-size: 1.3rem;
+}
+
+.calculadora-resultado {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #E6F2EA 0%, #FFFFFF 100%);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  border: 3px solid #1B8636;
+  box-shadow: 0 6px 20px rgba(27, 134, 54, 0.15);
+}
+.calculadora-resultado h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1B8636;
+  margin-bottom: 2rem;
+}
+
+.resultado-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultado-item {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.resultado-destacado {
+  grid-column: 1/-1;
+  background: linear-gradient(135deg, #1B8636 0%, rgb(18.4472049689, 91.5527950311, 36.8944099379) 100%);
+}
+.resultado-destacado .resultado-label,
+.resultado-destacado .resultado-valor-grande {
+  color: #FFFFFF;
+}
+
+.resultado-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resultado-valor {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #222222;
+}
+
+.resultado-valor-grande {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1B8636;
+}
+
+.resultado-verde {
+  color: #1B8636;
+}
+
+.resultado-roi {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.resultado-roi p {
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+}
+.resultado-roi p strong {
+  color: #1B8636;
+  font-size: 1.3rem;
+}
+
+.resultado-nota {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #4A4A4A;
+  margin-top: 0.5rem;
+}
+
+.btn-quiero-ahorro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #1B8636 0%, rgb(18.4472049689, 91.5527950311, 36.8944099379) 100%);
+  border: none;
+  border-radius: 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
+}
+.btn-quiero-ahorro:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(27, 134, 54, 0.4);
+}
+.btn-quiero-ahorro i {
+  font-size: 1.5rem;
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                        R E S P O N S I V E                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+@media (max-width: 1024px) {
+  .casos-hero-titulo {
+    font-size: 2.5rem;
+  }
+  .casos-section {
+    padding: 3.5rem 5%;
+  }
+  .casos-container {
+    gap: 2.5rem 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .casos-hero {
+    min-height: 50vh;
+  }
+  .casos-hero-titulo {
+    font-size: 2rem;
+  }
+  .casos-hero-subtitulo {
+    font-size: 1.1rem;
+  }
+  .casos-section {
+    padding: 3rem 4%;
+  }
+  .casos-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .calculadora-section {
+    padding: 3rem 4%;
+  }
+  .calculadora-form {
+    padding: 2rem;
+  }
+  .resultado-grid {
+    grid-template-columns: 1fr;
+  }
+  .resultado-destacado {
+    grid-column: 1;
+  }
+}
+@media (max-width: 425px) {
+  .casos-hero {
+    min-height: 40vh;
+  }
+  .casos-hero-content {
+    padding: 2rem 1.5rem;
+  }
+  .casos-hero-titulo {
+    font-size: 1.75rem;
+  }
+  .casos-hero-subtitulo {
+    font-size: 1rem;
+  }
+  .casos-section {
+    padding: 2.5rem 4%;
+  }
+  .caso-perfil {
+    padding: 1.5rem;
+  }
+  .caso-objecion,
+  .caso-testimonio {
+    padding: 1.25rem 1.5rem;
+  }
+  .caso-imagen {
+    height: 200px;
+  }
+  .caso-datos {
+    padding: 1.5rem;
+  }
+  .dato-icono {
+    font-size: 1.25rem;
+  }
+  .dato-label {
+    font-size: 0.8rem;
+  }
+  .dato-valor {
+    font-size: 1rem;
+  }
+  .calculadora-section {
+    padding: 2.5rem 4%;
+  }
+  .calculadora-header h2 {
+    font-size: 1.75rem;
+  }
+  .calculadora-form {
+    padding: 1.75rem;
+  }
+  .btn-calcular {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  .calculadora-resultado {
+    padding: 2rem 1.5rem;
+  }
+  .resultado-valor {
+    font-size: 1.5rem;
+  }
+  .resultado-valor-grande {
+    font-size: 2rem;
+  }
+  .btn-quiero-ahorro {
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .casos-hero-titulo {
+    font-size: 1.5rem;
+  }
+  .casos-hero-subtitulo {
+    font-size: 0.9rem;
+  }
+  .casos-section {
+    padding: 2rem 3%;
+  }
+  .caso-perfil {
+    padding: 1.25rem;
+  }
+  .caso-nombre {
+    font-size: 1.3rem;
+  }
+  .caso-objecion p,
+  .caso-testimonio p {
+    font-size: 0.9rem;
+  }
+  .caso-imagen {
+    height: 180px;
+  }
+  .calculadora-header h2 {
+    font-size: 1.5rem;
+  }
+  .calculadora-form {
+    padding: 1.5rem;
+  }
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  .form-group input,
+  .form-group select {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+  .resultado-valor {
+    font-size: 1.35rem;
+  }
+  .resultado-valor-grande {
+    font-size: 1.75rem;
+  }
+  .btn-quiero-ahorro {
+    font-size: 0.9rem;
+    padding: 1rem 1.25rem;
   }
 }
 /*
@@ -2346,13 +2938,15 @@
 
 .navegacion {
   display: flex;
+  align-items: center;
 }
 
 nav, ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {

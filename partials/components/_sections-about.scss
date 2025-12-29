@@ -87,7 +87,7 @@
     border-color: map.get($colores, verde);
 
     &:hover {
-        background-color: darken(#1B8636, 10%);
+        background-color: map.get($colores, verde);
     }
 }
 
@@ -255,7 +255,7 @@
 }
 
 .stat-destacado {
-    background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+    background: linear-gradient(135deg, map.get($colores, verde), map.get($colores, verde));
     
     .stat-icon,
     .stat-numero,
@@ -264,8 +264,8 @@
     }
 
     &:hover {
-        background: linear-gradient(135deg, darken(#1B8636, 5%), darken(#1B8636, 15%));
-        border-color: darken(#1B8636, 20%);
+        background: linear-gradient(135deg, map.get($colores, verde), map.get($colores, verde));
+        border-color: map.get($colores, verde);
     }
 }
 
@@ -486,7 +486,7 @@
         left: 0;
         width: 100%;
         height: 0;
-        background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+        background: linear-gradient(135deg, map.get($colores, verde), map.get($colores, verde));
         transition: height 0.4s ease;
         z-index: 0;
     }
@@ -523,7 +523,7 @@
     @include flex(row, center, center, nowrap, 0);
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, map.get($colores, verde), darken(#1B8636, 10%));
+    background: linear-gradient(135deg, map.get($colores, verde), map.get($colores, verde));
     border-radius: 50%;
     transition: all 0.4s ease;
 

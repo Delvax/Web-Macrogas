@@ -1,0 +1,662 @@
+// ========================================
+// CASOS DE ÉXITO - SECCIÓN COMPLETA
+// ========================================
+
+@use "sass:map";
+@use "../utilities/variables" as*;
+@use "../utilities/maps" as*;
+@use "../base/tipografias" as*;
+@use "../utilities/mixins" as *;
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - HERO CASOS DE ÉXITO                               #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.casos-hero {
+    position: relative;
+    min-height: 60vh;
+    background-image: url('../../assets/img/surtidor-gnc.jpg'); // ⚠️ Reemplazar con tu imagen
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include flex(row, center, center, nowrap, 0);
+}
+
+.casos-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    @include flex(row, center, center, nowrap, 0);
+}
+
+.casos-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: map.get($colores, blanco);
+    padding: 3rem 2rem;
+    max-width: 900px;
+}
+
+.casos-hero-titulo {
+    font-size: map.get($tamanios-texto, extra-grande);
+    font-weight: map.get($font-weights, bold);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.casos-hero-subtitulo {
+    font-size: map.get($tamanios-texto, mediano);
+    font-weight: map.get($font-weights, normal);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CARDS DE CASOS                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.title-section{
+    background-color: map.get($colores, $colorFondo-SeccionGrises);
+}
+
+.title-secion{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem;
+    color: map-get($colores, $colorTitulosNegro);
+}
+.casos-section {
+    background-color: map.get($colores, fondo-gris);
+    padding: 4rem 5%;
+}
+
+.casos-container {
+    @include grid(
+        repeat(2, 1fr),
+        auto,
+        center,
+        stretch
+    );
+    gap: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// Card individual
+.caso-card {
+    background-color: map.get($colores, blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(27, 134, 54, 0.15);
+    }
+}
+
+// 1. Perfil del cliente
+.caso-perfil {
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 2px solid map.get($colores, fondo-verde-claro);
+}
+
+.caso-nombre {
+    font-size: map.get($tamanios-fuente, h2);
+    font-weight: map.get($font-weights, bold);
+    color: $colorPrincipalVerde;
+    margin-bottom: 0.5rem;
+}
+
+.caso-profesion {
+    font-size: map.get($tamanios-texto, normal);
+    font-weight: map.get($font-weights, semi-bold);
+    color: map.get($colores, texto-oscuro);
+    margin-bottom: 0.25rem;
+}
+
+.caso-ubicacion {
+    font-size: 0.9rem;
+    color: map.get($colores, texto-oscuro);
+    font-weight: map.get($font-weights, normal);
+}
+
+// 2. Objeción (problema inicial)
+.caso-objecion {
+    background-color: map.get($colores, fondo-rosa-claro);
+    padding: 1.5rem 2rem;
+    border-left: 4px solid $colorPrincipalRojo;
+    
+    p {
+        font-style: italic;
+        color: map.get($colores, texto-oscuro);
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+// 3. Imagen del vehículo
+.caso-imagen {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: map.get($colores, fondo-gris);
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    .caso-card:hover & img {
+        transform: scale(1.05);
+    }
+}
+
+// 4. Datos reales
+.caso-datos {
+    padding: 2rem;
+    background-color: map.get($colores, blanco);
+}
+
+.dato-row {
+    @include flex(row, flex-start, center, nowrap, 0.75rem);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid map.get($colores, borde-claro);
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.dato-icono {
+    font-size: 1.5rem;
+    min-width: 2rem;
+}
+
+.dato-label {
+    font-size: 0.85rem;
+    font-weight: map.get($font-weights, semi-bold);
+    color: map.get($colores, texto-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex: 1;
+}
+
+.dato-valor {
+    font-size: 1.1rem;
+    font-weight: map.get($font-weights, bold);
+    color: map.get($colores, negro);
+}
+
+// 5. Testimonio (resultado positivo)
+.caso-testimonio {
+    background-color: map.get($colores, fondo-verde-claro);
+    padding: 1.5rem 2rem;
+    border-left: 4px solid $colorPrincipalVerde;
+    
+    p {
+        font-size: 1rem;
+        color: map.get($colores, texto-oscuro);
+        line-height: 1.6;
+        margin: 0;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CALCULADORA                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+.calculadora-section {
+    background-color: map.get($colores, blanco);
+    padding: 4rem 5%;
+}
+
+.calculadora-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.calculadora-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+        font-size: map.get($tamanios-texto, extra-grande);
+        font-weight: map.get($font-weights, bold);
+        color: map.get($colores, negro);
+        margin-bottom: 0.75rem;
+    }
+    
+    p {
+        font-size: map.get($tamanios-texto, normal);
+        color: map.get($colores, texto-oscuro);
+    }
+}
+
+// Formulario
+.calculadora-form {
+    background-color: map.get($colores, fondo-gris);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    
+    &:last-of-type {
+        margin-bottom: 2.5rem;
+    }
+    
+    label {
+        @include flex(row, flex-start, center, nowrap, 0.75rem);
+        font-size: 1rem;
+        font-weight: map.get($font-weights, semi-bold);
+        color: map.get($colores, negro);
+        margin-bottom: 0.75rem;
+        
+        i {
+            color: $colorPrincipalVerde;
+            font-size: 1.25rem;
+        }
+    }
+    
+    input,
+    select {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: 2px solid $colorBordeClaro;
+        border-radius: 8px;
+        font-family: 'Poppins', sans-serif;
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+            outline: none;
+            border-color: $colorPrincipalVerde;
+        }
+    }
+}
+
+// Botón calcular
+.btn-calcular {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    font-weight: map.get($font-weights, semi-bold);
+    color: map.get($colores, blanco);
+    background-color: $colorPrincipalVerde;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    @include flex(row, center, center, nowrap, 0.75rem);
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: darken(#1B8636, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
+    }
+    
+    i {
+        font-size: 1.3rem;
+    }
+}
+
+// Resultado
+.calculadora-resultado {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, map.get($colores, fondo-verde-claro) 0%, map.get($colores, blanco) 100%);
+    padding: 3rem 2.5rem;
+    border-radius: 12px;
+    border: 3px solid $colorPrincipalVerde;
+    box-shadow: 0 6px 20px rgba(27, 134, 54, 0.15);
+    
+    h3 {
+        text-align: center;
+        font-size: map.get($tamanios-fuente, h2);
+        font-weight: map.get($font-weights, bold);
+        color: $colorPrincipalVerde;
+        margin-bottom: 2rem;
+    }
+}
+
+.resultado-grid {
+    @include grid(repeat(2, 1fr), auto, center, stretch);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resultado-item {
+    background-color: map.get($colores, blanco);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.resultado-destacado {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, $colorPrincipalVerde 0%, darken(#1B8636, 10%) 100%);
+    
+    .resultado-label,
+    .resultado-valor-grande {
+        color: map.get($colores, blanco);
+    }
+}
+
+.resultado-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: map.get($font-weights, semi-bold);
+    color: map.get($colores, texto-oscuro);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.resultado-valor {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: map.get($font-weights, bold);
+    color: map.get($colores, negro);
+}
+
+.resultado-valor-grande {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: map.get($font-weights, bold);
+    color: $colorPrincipalVerde;
+}
+
+.resultado-verde {
+    color: $colorPrincipalVerde;
+}
+
+// ROI
+.resultado-roi {
+    background-color: map.get($colores, blanco);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    p {
+        font-size: 1.1rem;
+        color: map.get($colores, texto-oscuro);
+        margin-bottom: 0.5rem;
+        
+        strong {
+            color: $colorPrincipalVerde;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.resultado-nota {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: map.get($colores, texto-oscuro);
+    margin-top: 0.5rem;
+}
+
+// Botón CTA
+.btn-quiero-ahorro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    font-weight: map.get($font-weights, bold);
+    color: map.get($colores, blanco);
+    background: linear-gradient(135deg, $colorPrincipalVerde 0%, darken(#1B8636, 10%) 100%);
+    border: none;
+    border-radius: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(27, 134, 54, 0.4);
+    }
+    
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                        R E S P O N S I V E                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+// 💻 Desktop 1024px
+@media (max-width: 1024px) {
+    .casos-hero-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .casos-section {
+        padding: 3.5rem 5%;
+    }
+    
+    .casos-container {
+        gap: 2.5rem 1.5rem;
+    }
+}
+
+// 📱 Tablet 768px
+@media (max-width: 768px) {
+    .casos-hero {
+        min-height: 50vh;
+    }
+    
+    .casos-hero-titulo {
+        font-size: 2rem;
+    }
+    
+    .casos-hero-subtitulo {
+        font-size: 1.1rem;
+    }
+    
+    .casos-section {
+        padding: 3rem 4%;
+    }
+    
+    .casos-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .calculadora-section {
+        padding: 3rem 4%;
+    }
+    
+    .calculadora-form {
+        padding: 2rem;
+    }
+    
+    .resultado-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .resultado-destacado {
+        grid-column: 1;
+    }
+}
+
+// 📱 Mobile L 425px
+@media (max-width: 425px) {
+    .casos-hero {
+        min-height: 40vh;
+    }
+    
+    .casos-hero-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .casos-hero-titulo {
+        font-size: 1.75rem;
+    }
+    
+    .casos-hero-subtitulo {
+        font-size: 1rem;
+    }
+    
+    .casos-section {
+        padding: 2.5rem 4%;
+    }
+    
+    .caso-perfil {
+        padding: 1.5rem;
+    }
+    
+    .caso-objecion,
+    .caso-testimonio {
+        padding: 1.25rem 1.5rem;
+    }
+    
+    .caso-imagen {
+        height: 200px;
+    }
+    
+    .caso-datos {
+        padding: 1.5rem;
+    }
+    
+    .dato-icono {
+        font-size: 1.25rem;
+    }
+    
+    .dato-label {
+        font-size: 0.8rem;
+    }
+    
+    .dato-valor {
+        font-size: 1rem;
+    }
+    
+    .calculadora-section {
+        padding: 2.5rem 4%;
+    }
+    
+    .calculadora-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .calculadora-form {
+        padding: 1.75rem;
+    }
+    
+    .btn-calcular {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    .calculadora-resultado {
+        padding: 2rem 1.5rem;
+    }
+    
+    .resultado-valor {
+        font-size: 1.5rem;
+    }
+    
+    .resultado-valor-grande {
+        font-size: 2rem;
+    }
+    
+    .btn-quiero-ahorro {
+        font-size: 1rem;
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+// 📱 Mobile S 320px
+@media (max-width: 320px) {
+    .casos-hero-titulo {
+        font-size: 1.5rem;
+    }
+    
+    .casos-hero-subtitulo {
+        font-size: 0.9rem;
+    }
+    
+    .casos-section {
+        padding: 2rem 3%;
+    }
+    
+    .caso-perfil {
+        padding: 1.25rem;
+    }
+    
+    .caso-nombre {
+        font-size: 1.3rem;
+    }
+    
+    .caso-objecion p,
+    .caso-testimonio p {
+        font-size: 0.9rem;
+    }
+    
+    .caso-imagen {
+        height: 180px;
+    }
+    
+    .calculadora-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .calculadora-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+    
+    .resultado-valor {
+        font-size: 1.35rem;
+    }
+    
+    .resultado-valor-grande {
+        font-size: 1.75rem;
+    }
+    
+    .btn-quiero-ahorro {
+        font-size: 0.9rem;
+        padding: 1rem 1.25rem;
+    }
+}
