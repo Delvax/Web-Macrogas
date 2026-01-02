@@ -74,7 +74,7 @@
     display: flex;
     justify-content: center;
     margin: 2rem 2rem;
-    color: map-get($colores, $colorTitulosNegro);
+    color: map.get($colores, $colorTitulosNegro);
 }
 .casos-section {
     background-color: map.get($colores, fondo-gris);
@@ -312,7 +312,7 @@
     transition: all 0.3s ease;
     
     &:hover {
-        background-color: darken(#1B8636, 10%);
+        background-color: $colorPrincipalVerde 10%;
         transform: translateY(-2px);
         box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
     }
@@ -356,7 +356,7 @@
 
 .resultado-destacado {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, $colorPrincipalVerde 0%, darken(#1B8636, 10%) 100%);
+    background: linear-gradient(135deg, $colorPrincipalVerde 0%, $colorPrincipalVerde 10% 100%);
     
     .resultado-label,
     .resultado-valor-grande {
@@ -430,7 +430,7 @@
     font-size: 1.25rem;
     font-weight: map.get($font-weights, bold);
     color: map.get($colores, blanco);
-    background: linear-gradient(135deg, $colorPrincipalVerde 0%, darken(#1B8636, 10%) 100%);
+    background: linear-gradient(135deg, $colorPrincipalVerde 0%, $colorPrincipalVerde 10% 100%);
     border: none;
     border-radius: 3rem;
     text-decoration: none;

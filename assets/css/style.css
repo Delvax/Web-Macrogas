@@ -2304,7 +2304,7 @@
   transition: all 0.3s ease;
 }
 .btn-calcular:hover {
-  background-color: rgb(18.4472049689, 91.5527950311, 36.8944099379);
+  background-color: #1B8636 10%;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(27, 134, 54, 0.3);
 }
@@ -2348,7 +2348,7 @@
 
 .resultado-destacado {
   grid-column: 1/-1;
-  background: linear-gradient(135deg, #1B8636 0%, rgb(18.4472049689, 91.5527950311, 36.8944099379) 100%);
+  background: linear-gradient(135deg, #1B8636 0%, #1B8636 10% 100%);
 }
 .resultado-destacado .resultado-label,
 .resultado-destacado .resultado-valor-grande {
@@ -2417,7 +2417,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   color: #FFFFFF;
-  background: linear-gradient(135deg, #1B8636 0%, rgb(18.4472049689, 91.5527950311, 36.8944099379) 100%);
+  background: linear-gradient(135deg, #1B8636 0%, #1B8636 10% 100%);
   border: none;
   border-radius: 3rem;
   text-decoration: none;
