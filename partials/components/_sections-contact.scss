@@ -1,0 +1,753 @@
+@use "sass:map";
+@use "../utilities/variables" as*;
+@use "../utilities/maps" as*;
+@use "../base/tipografias" as*;
+@use "../utilities/mixins" as *;
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - CONTACTO                                          #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+/* HERO CONTACTO */
+.hero-contacto {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(27, 134, 54, 0.85), rgba(27, 134, 54, 0.85)), 
+                url('../img/hero-car-gnc.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem;
+}
+
+.hero-contacto-content h1 {
+    color: $colorPrincipalBlanco;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-contacto-content p {
+    color: $colorPrincipalBlanco;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* MÉTODOS DE CONTACTO RÁPIDO */
+.contacto-rapido {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 4rem 10%;
+}
+
+.contacto-rapido-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-card {
+    background-color: $colorPrincipalBlanco;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contacto-destacado {
+    background-color: $colorFondo-SeccionVerdeClaro;
+    border: 2px solid $colorPrincipalVerde;
+}
+
+.contacto-icon {
+    margin-bottom: 1.5rem;
+}
+
+.contacto-icon i {
+    font-size: 3rem;
+    color: $colorPrincipalVerde;
+}
+
+.contacto-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.75rem;
+}
+
+.contacto-info {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.contacto-link,
+.contacto-link-whatsapp {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contacto-link {
+    background-color: transparent;
+    color: $colorPrincipalVerde;
+    border: 2px solid $colorPrincipalVerde;
+}
+
+.contacto-link:hover {
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    transform: scale(1.05);
+}
+
+.contacto-link-whatsapp {
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    border: 2px solid $colorPrincipalVerde;
+}
+
+.contacto-link-whatsapp:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+    transform: scale(1.05);
+}
+
+/* FORMULARIO DE CONTACTO */
+.formulario-contacto {
+    background-color: $colorPrincipalBlanco;
+    padding: 5rem 10%;
+}
+
+.formulario-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.formulario-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formulario-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.75rem;
+}
+
+.formulario-header p {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+}
+
+.form-contacto {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 2.5rem;
+    border-radius: 12px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.required {
+    color: $colorPrincipalRojo;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.875rem 1rem;
+    border: 1px solid $colorBordeClaro;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: $colorPrincipalVerde;
+    box-shadow: 0 0 0 3px rgba(27, 134, 54, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.boton-form-submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.boton-form-submit:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+    transform: translateY(-2px);
+}
+
+.form-aviso {
+    text-align: center;
+    margin-top: 1rem;
+    color: $colorTextoOscuro;
+    font-size: 0.9rem;
+}
+
+/* UBICACIÓN Y HORARIOS */
+.ubicacion-horarios {
+    background-color: $colorFondo-SeccionVerdeClaro;
+    padding: 5rem 10%;
+}
+
+.ubicacion-horarios-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ubicacion-contenido h2,
+.horarios-contenido h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 1.5rem;
+}
+
+.ubicacion-contenido h2 i,
+.horarios-contenido h2 i {
+    color: $colorPrincipalVerde;
+    margin-right: 0.5rem;
+}
+
+.direccion {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.boton-mapa {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    border-radius: 3rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.boton-mapa:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+}
+
+.boton-mapa i {
+    margin-right: 0.5rem;
+}
+
+.mapa-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.horarios-lista {
+    background-color: $colorPrincipalBlanco;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid $colorBordeClaro;
+}
+
+.horario-item:last-child {
+    border-bottom: none;
+}
+
+.dia {
+    font-weight: 600;
+    color: $colorTitulosNegro;
+}
+
+.hora {
+    color: $colorTextoOscuro;
+    font-weight: 500;
+}
+
+.horario-cerrado .dia,
+.horario-cerrado .hora {
+    color: lighten($colorTextoOscuro, 20%);
+}
+
+.horarios-nota {
+    background-color: $colorPrincipalBlanco;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.horarios-nota i {
+    color: $colorPrincipalVerde;
+    font-size: 1.25rem;
+}
+
+.horarios-nota p {
+    color: $colorTextoOscuro;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* PREGUNTAS FRECUENTES */
+.faq-section {
+    background-color: $colorPrincipalBlanco;
+    padding: 5rem 10%;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 3rem;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: $colorFondo-SeccionGrises;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: darken($colorFondo-SeccionGrises, 5%);
+}
+
+.faq-question h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $colorTitulosNegro;
+    margin: 0;
+}
+
+.faq-question i {
+    color: $colorPrincipalVerde;
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 2rem 1.5rem 2rem;
+}
+
+.faq-answer p {
+    color: $colorTextoOscuro;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - CONTACTO - 1024px                                      #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 1024px) {
+    .contacto-rapido {
+        padding: 3.5rem 8%;
+    }
+
+    .formulario-contacto {
+        padding: 4rem 8%;
+    }
+
+    .ubicacion-horarios {
+        padding: 4rem 8%;
+    }
+
+    .faq-section {
+        padding: 4rem 8%;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - CONTACTO - 768px                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 768px) {
+    
+    /* Hero Contacto */
+    .hero-contacto {
+        min-height: 35vh;
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-contacto-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-contacto-content p {
+        font-size: 1.125rem;
+    }
+
+    /* Contacto Rápido */
+    .contacto-rapido {
+        padding: 3rem 5%;
+    }
+
+    .contacto-rapido-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contacto-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Formulario */
+    .formulario-contacto {
+        padding: 3rem 5%;
+    }
+
+    .form-contacto {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Ubicación y Horarios */
+    .ubicacion-horarios {
+        padding: 3rem 5%;
+    }
+
+    .ubicacion-horarios-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .ubicacion-contenido h2,
+    .horarios-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+        padding: 3rem 5%;
+    }
+
+    .faq-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - CONTACTO - 425px                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 425px) {
+    
+    /* Hero Contacto */
+    .hero-contacto {
+        min-height: 30vh;
+        padding: 2rem 1rem;
+    }
+
+    .hero-contacto-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-contacto-content p {
+        font-size: 1rem;
+    }
+
+    /* Contacto Rápido */
+    .contacto-rapido {
+        padding: 2.5rem 1rem;
+    }
+
+    .contacto-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contacto-icon i {
+        font-size: 2.5rem;
+    }
+
+    .contacto-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .contacto-info {
+        font-size: 1rem;
+    }
+
+    /* Formulario */
+    .formulario-contacto {
+        padding: 2.5rem 1rem;
+    }
+
+    .formulario-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .formulario-header p {
+        font-size: 1rem;
+    }
+
+    .form-contacto {
+        padding: 1.5rem 1rem;
+    }
+
+    .boton-form-submit {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* Ubicación y Horarios */
+    .ubicacion-horarios {
+        padding: 2.5rem 1rem;
+    }
+
+    .ubicacion-contenido h2,
+    .horarios-contenido h2 {
+        font-size: 1.35rem;
+    }
+
+    .direccion {
+        font-size: 1rem;
+    }
+
+    .horarios-lista {
+        padding: 1rem;
+    }
+
+    .horario-item {
+        padding: 0.75rem 0;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    /* FAQ */
+    .faq-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .faq-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        padding: 1rem 1.25rem;
+    }
+
+    .faq-question h3 {
+        font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1.25rem 1rem 1.25rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.95rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - CONTACTO - 375px                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 375px) {
+    
+    .hero-contacto-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-contacto-content p {
+        font-size: 0.95rem;
+    }
+
+    .contacto-rapido {
+        padding: 2rem 0.8rem;
+    }
+
+    .formulario-contacto {
+        padding: 2rem 0.8rem;
+    }
+
+    .form-contacto {
+        padding: 1.25rem 0.8rem;
+    }
+
+    .ubicacion-horarios {
+        padding: 2rem 0.8rem;
+    }
+
+    .faq-section {
+        padding: 2rem 0.8rem;
+    }
+
+    .faq-section h2 {
+        font-size: 1.35rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - CONTACTO - 320px                                       #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 320px) {
+    
+    .hero-contacto-content h1 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    .hero-contacto-content p {
+        font-size: 0.9rem;
+    }
+
+    .contacto-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .contacto-icon i {
+        font-size: 2.25rem;
+    }
+
+    .contacto-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .formulario-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .ubicacion-contenido h2,
+    .horarios-contenido h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 0.9rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+}

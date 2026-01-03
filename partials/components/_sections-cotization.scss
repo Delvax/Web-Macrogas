@@ -1,0 +1,1320 @@
+@use  "../utilities/variables" as *;
+@use  "../base/tipografias" as *;
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                                   SECTION - COTIZACIÓN                                        #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float i {
+    font-size: 2rem;
+    color: $colorPrincipalBlanco;
+}
+
+/* HERO COTIZACIÓN */
+.hero-cotizacion {
+    background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);
+    padding: 4rem 10%;
+    text-align: center;
+    color: $colorPrincipalBlanco;
+}
+
+.badge-promocion {
+    display: inline-block;
+    background-color: $colorPrincipalRojo;
+    color: $colorPrincipalBlanco;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.badge-promocion i {
+    margin-right: 0.5rem;
+}
+
+.hero-cotizacion-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.hero-subtitulo {
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.beneficio-item i {
+    color: #25D366;
+    font-size: 1.25rem;
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boton-cta-whatsapp,
+.boton-cta-secundario {
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.boton-cta-whatsapp {
+    background-color: #25D366;
+    color: $colorPrincipalBlanco;
+    border: 2px solid #25D366;
+}
+
+.boton-cta-whatsapp:hover {
+    background-color: #20b858;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.boton-cta-secundario {
+    background-color: transparent;
+    color: $colorPrincipalBlanco;
+    border: 2px solid $colorPrincipalBlanco;
+}
+
+.boton-cta-secundario:hover {
+    background-color: $colorPrincipalBlanco;
+    color: $colorPrincipalVerde;
+}
+
+/* FORMULARIO COTIZACIÓN */
+.formulario-cotizacion {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 5rem 10%;
+}
+
+.formulario-cotizacion-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-header-cotizacion {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.formulario-header-cotizacion h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.75rem;
+}
+
+.formulario-header-cotizacion p {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+}
+
+.form-cotizacion {
+    background-color: $colorPrincipalBlanco;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group-cotizacion {
+    margin-bottom: 1.5rem;
+}
+
+.form-group-cotizacion label {
+    display: block;
+    font-weight: 600;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group-cotizacion input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid $colorBordeClaro;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group-cotizacion input:focus {
+    outline: none;
+    border-color: $colorPrincipalVerde;
+    box-shadow: 0 0 0 3px rgba(27, 134, 54, 0.1);
+}
+
+.form-group-cotizacion small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: $colorTextoOscuro;
+}
+
+.boton-submit-cotizacion {
+    width: 100%;
+    padding: 1.125rem 2rem;
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    border: none;
+    border-radius: 3rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.boton-submit-cotizacion:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(27, 134, 54, 0.3);
+}
+
+.form-garantias {
+    text-align: center;
+}
+
+.form-garantias p {
+    color: $colorTextoOscuro;
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+.form-garantias i {
+    color: $colorPrincipalVerde;
+    margin-right: 0.25rem;
+}
+
+.alternativa-contacto {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid $colorBordeClaro;
+}
+
+.alternativa-contacto p {
+    color: $colorTextoOscuro;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.boton-whatsapp-alternativo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background-color: #25D366;
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    border-radius: 3rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.boton-whatsapp-alternativo:hover {
+    background-color: #20b858;
+    transform: translateY(-2px);
+}
+
+/* POR QUÉ MACROGAS */
+.por-que-macrogas-cotizacion {
+    background-color: $colorPrincipalBlanco;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.por-que-macrogas-cotizacion h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 3rem;
+}
+
+.razones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.razon-card {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.razon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.razon-icon {
+    margin-bottom: 1rem;
+}
+
+.razon-icon i {
+    font-size: 3rem;
+    color: $colorPrincipalVerde;
+}
+
+.razon-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.5rem;
+}
+
+.razon-card p {
+    color: $colorTextoOscuro;
+    font-size: 1rem;
+}
+
+/* PRECIOS ESTIMADOS */
+.precios-estimados {
+    background-color: $colorFondo-SeccionVerdeClaro;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.precios-estimados h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 1rem;
+}
+
+.precios-subtitulo {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+    margin-bottom: 3rem;
+}
+
+.precios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+}
+
+.precio-card {
+    background-color: $colorPrincipalBlanco;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.precio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.precio-destacado {
+    border: 3px solid $colorPrincipalVerde;
+    transform: scale(1.05);
+}
+
+.precio-promocion {
+    background: linear-gradient(135deg, #FBE6E6 0%, #FFF5F5 100%);
+}
+
+.badge-destacado {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.precio-header {
+    margin-bottom: 1.5rem;
+}
+
+.precio-header i {
+    font-size: 2.5rem;
+    color: $colorPrincipalVerde;
+    margin-bottom: 0.75rem;
+}
+
+.precio-header h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+}
+
+.precio-rango {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.precio-desde,
+.precio-hasta {
+    font-size: 0.9rem;
+    color: $colorTextoOscuro;
+}
+
+.precio-valor {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: $colorPrincipalVerde;
+    margin: 0.5rem 0;
+}
+
+.precio-ejemplos {
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+}
+
+.precio-ejemplos p {
+    font-size: 0.95rem;
+    color: $colorTextoOscuro;
+    line-height: 1.5;
+}
+
+.boton-cotizar-precio {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    border-radius: 3rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.boton-cotizar-precio:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+    transform: translateY(-2px);
+}
+
+.boton-promocion {
+    background-color: $colorPrincipalRojo;
+}
+
+.boton-promocion:hover {
+    background-color: darken($colorPrincipalRojo, 10%);
+}
+
+.precios-nota {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.precios-nota i {
+    color: $colorPrincipalVerde;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.precios-nota p {
+    font-size: 0.9rem;
+    color: $colorTextoOscuro;
+    margin: 0;
+    text-align: left;
+}
+
+/* CALCULADORA DE AHORRO */
+.calculadora-ahorro {
+    background-color: $colorPrincipalBlanco;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.calculadora-ahorro h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 1rem;
+}
+
+.calculadora-subtitulo {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+    margin-bottom: 3rem;
+}
+
+.ahorro-opciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.ahorro-card {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ahorro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ahorro-destacado {
+    background-color: $colorFondo-SeccionVerdeClaro;
+    border: 2px solid $colorPrincipalVerde;
+}
+
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.ahorro-km {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 1rem;
+}
+
+.ahorro-monto {
+    font-size: 0.95rem;
+    color: $colorTextoOscuro;
+    margin-bottom: 0.5rem;
+}
+
+.ahorro-valor {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorPrincipalVerde;
+    margin-bottom: 1rem;
+}
+
+.ahorro-descripcion {
+    font-size: 0.9rem;
+    color: $colorTextoOscuro;
+    font-style: italic;
+}
+
+.ahorro-cta {
+    margin-top: 2rem;
+}
+
+.boton-calcular-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #25D366;
+    color: $colorPrincipalBlanco;
+    text-decoration: none;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+}
+
+.boton-calcular-whatsapp:hover {
+    background-color: #20b858;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* FAQ COTIZACIÓN */
+.faq-cotizacion {
+    background-color: $colorFondo-SeccionGrises;
+    padding: 5rem 10%;
+}
+
+.faq-cotizacion h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 3rem;
+}
+
+.faq-cotizacion-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-cotizacion-item {
+    background-color: $colorPrincipalBlanco;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-cotizacion-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.faq-cotizacion-item h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.faq-cotizacion-item h3 i {
+    color: $colorPrincipalVerde;
+}
+
+.faq-cotizacion-item p {
+    color: $colorTextoOscuro;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA FINAL */
+.cta-final-cotizacion {
+    background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);
+    padding: 5rem 10%;
+    text-align: center;
+    color: $colorPrincipalBlanco;
+}
+
+.cta-final-cotizacion h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.cta-final-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 900px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-opcion {
+    background-color: $colorPrincipalBlanco;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.cta-opcion:hover {
+    transform: translateY(-8px);
+}
+
+.cta-whatsapp {
+    border: 3px solid #25D366;
+}
+
+.cta-icono {
+    margin-bottom: 1.5rem;
+}
+
+.cta-icono i {
+    font-size: 4rem;
+    color: $colorPrincipalVerde;
+}
+
+.cta-whatsapp .cta-icono i {
+    color: #25D366;
+}
+
+.cta-opcion h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: $colorTitulosNegro;
+    margin-bottom: 0.5rem;
+}
+
+.cta-opcion p {
+    font-size: 1.125rem;
+    color: $colorTextoOscuro;
+    margin-bottom: 1rem;
+}
+
+.cta-badge {
+    display: inline-block;
+    background-color: $colorFondo-SeccionVerdeClaro;
+    color: $colorPrincipalVerde;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.boton-cta-final-wa,
+.boton-cta-final-form {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.boton-cta-final-wa {
+    background-color: #25D366;
+    color: $colorPrincipalBlanco;
+}
+
+.boton-cta-final-wa:hover {
+    background-color: #20b858;
+}
+
+.boton-cta-final-form {
+    background-color: $colorPrincipalVerde;
+    color: $colorPrincipalBlanco;
+}
+
+.boton-cta-final-form:hover {
+    background-color: darken($colorPrincipalVerde, 10%);
+}
+
+.urgencia-mensaje {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: rgba(201, 0, 0, 0.15);
+    border-radius: 8px;
+    border: 2px solid $colorPrincipalRojo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.urgencia-mensaje i {
+    font-size: 1.5rem;
+    color: $colorPrincipalRojo;
+    animation: pulse 2s infinite;
+}
+
+.urgencia-mensaje p {
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.urgencia-mensaje strong {
+    color: $colorPrincipalRojo;
+}
+
+
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - COTIZACIÓN - 1024px                                    #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 1024px) {
+    .hero-cotizacion {
+        padding: 3.5rem 8%;
+    }
+
+    .formulario-cotizacion {
+        padding: 4rem 8%;
+    }
+
+    .por-que-macrogas-cotizacion {
+        padding: 4rem 8%;
+    }
+
+    .precios-estimados {
+        padding: 4rem 8%;
+    }
+
+    .calculadora-ahorro {
+        padding: 4rem 8%;
+    }
+
+    .faq-cotizacion {
+        padding: 4rem 8%;
+    }
+
+    .cta-final-cotizacion {
+        padding: 4rem 8%;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - COTIZACIÓN - 768px                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 768px) {
+    
+    /* WhatsApp flotante */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.75rem;
+    }
+
+    /* Hero */
+    .hero-cotizacion {
+        padding: 3rem 5%;
+    }
+
+    .hero-cotizacion-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-beneficios {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+    }
+
+    .boton-cta-whatsapp,
+    .boton-cta-secundario {
+        width: 100%;
+    }
+
+    /* Formulario */
+    .formulario-cotizacion {
+        padding: 3rem 5%;
+    }
+
+    .form-cotizacion {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Razones */
+    .por-que-macrogas-cotizacion {
+        padding: 3rem 5%;
+    }
+
+    .razones-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Precios */
+    .precios-estimados {
+        padding: 3rem 5%;
+    }
+
+    .precios-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .precio-destacado {
+        transform: scale(1);
+    }
+
+    /* Ahorro */
+    .calculadora-ahorro {
+        padding: 3rem 5%;
+    }
+
+    .ahorro-opciones {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* FAQ */
+    .faq-cotizacion {
+        padding: 3rem 5%;
+    }
+
+    .faq-cotizacion-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .faq-cotizacion-item {
+        padding: 1.5rem;
+    }
+
+    /* CTA Final */
+    .cta-final-cotizacion {
+        padding: 3rem 5%;
+    }
+
+    .cta-final-cotizacion h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-final-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - COTIZACIÓN - 425px                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 425px) {
+    
+    /* WhatsApp flotante */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.5rem;
+    }
+
+    /* Hero */
+    .hero-cotizacion {
+        padding: 2.5rem 1rem;
+    }
+
+    .badge-promocion {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-cotizacion-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitulo {
+        font-size: 1rem;
+    }
+
+    .hero-beneficios {
+        grid-template-columns: 1fr;
+        font-size: 0.9rem;
+    }
+
+    .boton-cta-whatsapp,
+    .boton-cta-secundario {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* Formulario */
+    .formulario-cotizacion {
+        padding: 2.5rem 1rem;
+    }
+
+    .formulario-header-cotizacion h2 {
+        font-size: 1.75rem;
+    }
+
+    .formulario-header-cotizacion p {
+        font-size: 1rem;
+    }
+
+    .form-cotizacion {
+        padding: 1.5rem 1rem;
+    }
+
+    .boton-submit-cotizacion {
+        font-size: 1.125rem;
+        padding: 1rem 1.5rem;
+    }
+
+    /* Razones */
+    .por-que-macrogas-cotizacion {
+        padding: 2.5rem 1rem;
+    }
+
+    .por-que-macrogas-cotizacion h2 {
+        font-size: 1.75rem;
+    }
+
+    .razon-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .razon-icon i {
+        font-size: 2.5rem;
+    }
+
+    .razon-card h3 {
+        font-size: 1.35rem;
+    }
+
+    /* Precios */
+    .precios-estimados {
+        padding: 2.5rem 1rem;
+    }
+
+    .precios-estimados h2 {
+        font-size: 1.75rem;
+    }
+
+    .precios-subtitulo {
+        font-size: 1rem;
+    }
+
+    .precio-card {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .precio-header i {
+        font-size: 2rem;
+    }
+
+    .precio-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .precio-valor {
+        font-size: 2rem;
+    }
+
+    /* Ahorro */
+    .calculadora-ahorro {
+        padding: 2.5rem 1rem;
+    }
+
+    .calculadora-ahorro h2 {
+        font-size: 1.75rem;
+    }
+
+    .calculadora-subtitulo {
+        font-size: 1rem;
+    }
+
+    .ahorro-card {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .ahorro-km {
+        font-size: 1rem;
+    }
+
+    .ahorro-valor {
+        font-size: 1.75rem;
+    }
+
+    .boton-calcular-whatsapp {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    /* FAQ */
+    .faq-cotizacion {
+        padding: 2.5rem 1rem;
+    }
+
+    .faq-cotizacion h2 {
+        font-size: 1.75rem;
+    }
+
+    .faq-cotizacion-item {
+        padding: 1.25rem;
+    }
+
+    .faq-cotizacion-item h3 {
+        font-size: 1rem;
+    }
+
+    .faq-cotizacion-item p {
+        font-size: 0.95rem;
+    }
+
+    /* CTA Final */
+    .cta-final-cotizacion {
+        padding: 2.5rem 1rem;
+    }
+
+    .cta-final-cotizacion h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-opcion {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-icono i {
+        font-size: 3rem;
+    }
+
+    .cta-opcion h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-opcion p {
+        font-size: 1rem;
+    }
+
+    .urgencia-mensaje {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem;
+    }
+
+    .urgencia-mensaje p {
+        font-size: 1rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - COTIZACIÓN - 375px                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 375px) {
+    
+    .hero-cotizacion-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitulo {
+        font-size: 0.95rem;
+    }
+
+    .formulario-cotizacion {
+        padding: 2rem 0.8rem;
+    }
+
+    .formulario-header-cotizacion h2 {
+        font-size: 1.5rem;
+    }
+
+    .por-que-macrogas-cotizacion {
+        padding: 2rem 0.8rem;
+    }
+
+    .por-que-macrogas-cotizacion h2 {
+        font-size: 1.5rem;
+    }
+
+    .precios-estimados {
+        padding: 2rem 0.8rem;
+    }
+
+    .precios-estimados h2 {
+        font-size: 1.5rem;
+    }
+
+    .calculadora-ahorro {
+        padding: 2rem 0.8rem;
+    }
+
+    .calculadora-ahorro h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-cotizacion {
+        padding: 2rem 0.8rem;
+    }
+
+    .faq-cotizacion h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-final-cotizacion {
+        padding: 2rem 0.8rem;
+    }
+
+    .cta-final-cotizacion h2 {
+        font-size: 1.35rem;
+    }
+}
+
+/*
+    #################################################################################################
+    #                                                                                               #
+    #                           RESPONSIVE - COTIZACIÓN - 320px                                     #
+    #                                                                                               #
+    #################################################################################################
+*/
+
+@media (max-width: 320px) {
+    
+    .hero-cotizacion-content h1 {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    .hero-subtitulo {
+        font-size: 0.9rem;
+    }
+
+    .beneficio-item {
+        font-size: 0.85rem;
+    }
+
+    .boton-cta-whatsapp,
+    .boton-cta-secundario {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .formulario-header-cotizacion h2 {
+        font-size: 1.35rem;
+    }
+
+    .por-que-macrogas-cotizacion h2 {
+        font-size: 1.35rem;
+    }
+
+    .razon-icon i {
+        font-size: 2.25rem;
+    }
+
+    .razon-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .precios-estimados h2 {
+        font-size: 1.35rem;
+    }
+
+    .precio-header h3 {
+        font-size: 1.15rem;
+    }
+
+    .precio-valor {
+        font-size: 1.75rem;
+    }
+
+    .calculadora-ahorro h2 {
+        font-size: 1.35rem;
+    }
+
+    .ahorro-valor {
+        font-size: 1.5rem;
+    }
+
+    .faq-cotizacion h2 {
+        font-size: 1.35rem;
+    }
+
+    .faq-cotizacion-item h3 {
+        font-size: 0.95rem;
+    }
+
+    .faq-cotizacion-item p {
+        font-size: 0.9rem;
+    }
+
+    .cta-final-cotizacion h2 {
+        font-size: 1.25rem;
+    }
+
+    .cta-opcion h3 {
+        font-size: 1.35rem;
+    }
+
+    .cta-opcion p {
+        font-size: 0.95rem;
+    }
+
+    .urgencia-mensaje p {
+        font-size: 0.95rem;
+    }
+}
