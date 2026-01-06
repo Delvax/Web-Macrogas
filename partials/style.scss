@@ -32,9 +32,12 @@
 
 //Quinto MediaQuerys
 
-@use  "./layout/media/media320" as*;
-@use  "./layout/media/media425" as*;
+@use  "./layout/media/media1024" as*;
 @use  "./layout/media/media768" as*;
-// @use  "./layout/media/media1024" as*;
+@use  "./layout/media/media425" as*;
+@use  "./layout/media/media320" as*;
+
+
+
 
 

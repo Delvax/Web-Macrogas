@@ -1,5 +1,9 @@
-@use  "../utilities/variables" as*;
-@use  "../base/tipografias" as*;
+@use "../utilities/variables" as *;
+@use "../base/tipografias" as *;
+
+/* ========================================
+   ESTILOS BASE - DESKTOP (sin media query)
+   ======================================== */
 
 .logotipo {
     width: 15.625rem;
@@ -7,17 +11,17 @@
     display: block;
 }
 
-.header-logotipo{
+.header-logotipo {
     display: flex;
     align-items: center;
 }
 
-.header-logotipo a{
-    margin: 0px;
-    padding: 0px;
+.header-logotipo a {
+    margin: 0;
+    padding: 0;
 }
 
-.menu-principal{
+.menu-principal {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     display: flex;
@@ -25,17 +29,18 @@
     align-items: center;
 }
 
-.navegacion{
-    display: flex;
-    align-items: center; // ✅ CORRECTO: Alinea verticalmente nav y botones
+.navegacion {
+    display: flex; /* ✅ Visible en desktop */
+    align-items: center;
 }
 
-nav, ul {
+nav,
+ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;  // ⭐ AGREGÁ ESTA LÍNEA - Elimina el margin por defecto del <ul>
-    padding: 0; // ⭐ AGREGÁ ESTA LÍNEA - Elimina el padding por defecto del <ul>
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -49,22 +54,18 @@ nav ul li a {
     font-weight: 400;
 }
 
-/* Botón hamburguesa oculto por defecto */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: $colorPrincipalVerde;
-}
+/* ========================================
+   ELEMENTOS OCULTOS EN DESKTOP
+   ======================================== */
 
-/* Ocultamos el checkbox */
+/* Ocultamos el checkbox (siempre oculto) */
 #menu-toggle {
     display: none;
 }
 
-/* Ícono hamburguesa oculto en escritorio */
+/* Ícono hamburguesa oculto en desktop */
 .menu-icon {
-    display: none;
+    display: none; /* ✅ Oculto en desktop */
     font-size: 2rem;
     cursor: pointer;
     color: $colorPrincipalVerde;

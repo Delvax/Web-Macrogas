@@ -1,10 +1,44 @@
-@use  "../../utilities/variables" as*;
-@use  "../../base/tipografias" as*;
+@use "sass:map"; 
+@use "../../utilities/maps" as *;
+@use "../../base/tipografias" as *;
+@use "../../utilities/variables" as *;
+
+
 
 /* 💻 Para Laptop 1024 */
 @media (max-width: 1024px) {
+    
     .menu-principal {
-        padding: 0 2rem;
+    display: flex;
+    justify-content: space-around; /* Logo izquierda, hamburguesa derecha */
+    flex-wrap: wrap; /* Menú salta a nueva línea */
+    }
+
+    // .logotipo{
+    //     margin-bottom: 0,21rem;
+    // }
+
+    // .navegacion {
+    //     margin: 1rem;
+    // }
+
+        .navegacion, nav ul li a {
+        color: map.get($colores, titulo);
+        display: flex;
+        padding: 0px;
+        margin-top:1rem;
+        font-size: map.get($tamanios-texto, grande);
+        font-weight:700;
+    }
+
+    .boton-primario{
+        font-size: map.get($tamanios-texto, grande);
+        border: 3px solid #DDDDDD;
+    }
+
+    .boton-secundario{
+        font-size: map.get($tamanios-texto, grande);
+        border: 3px solid #DDDDDD;
     }
 
     .conteiner-hero {
@@ -24,3 +58,4 @@
         padding: 3rem 8%;
     }
 }
+

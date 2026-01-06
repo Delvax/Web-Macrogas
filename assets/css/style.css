@@ -2609,10 +2609,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(27, 134, 54, 0.85), rgba(27, 134, 54, 0.85)), url("../img/hero-car-gnc.jpg");
+  background: linear-gradient(rgba(27, 134, 54, 0.404), rgba(27, 134, 54, 0.85)), url("../../assets/img/diagnostico-computarizado.jpg");
   background-size: cover;
   background-position: center;
-  padding: 3rem 1rem;
+  padding: 10rem 3rem;
 }
 
 .hero-contacto-content h1 {
@@ -3304,8 +3304,11 @@
 
 /* HERO COTIZACIÓN */
 .hero-cotizacion {
-  background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);
-  padding: 4rem 10%;
+  background: linear-gradient(rgba(27, 134, 54, 0.404), rgba(27, 134, 54, 0.85)), url("../../assets/img/cta_car_action1.jpg");
+  /* background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);*/
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 3rem;
   text-align: center;
   color: #FFFFFF;
 }
@@ -4785,6 +4788,9 @@
     font-size: 0.9rem;
   }
 }
+/* ========================================
+   ESTILOS BASE - DESKTOP (sin media query)
+   ======================================== */
 .logotipo {
   width: 15.625rem;
   height: 3.125rem;
@@ -4797,8 +4803,8 @@
 }
 
 .header-logotipo a {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-principal {
@@ -4810,11 +4816,12 @@
 }
 
 .navegacion {
-  display: flex;
+  display: flex; /* ✅ Visible en desktop */
   align-items: center;
 }
 
-nav, ul {
+nav,
+ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4833,22 +4840,17 @@ nav ul li a {
   font-weight: 400;
 }
 
-/* Botón hamburguesa oculto por defecto */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #1B8636;
-}
-
-/* Ocultamos el checkbox */
+/* ========================================
+   ELEMENTOS OCULTOS EN DESKTOP
+   ======================================== */
+/* Ocultamos el checkbox (siempre oculto) */
 #menu-toggle {
   display: none;
 }
 
-/* Ícono hamburguesa oculto en escritorio */
+/* Ícono hamburguesa oculto en desktop */
 .menu-icon {
-  display: none;
+  display: none; /* ✅ Oculto en desktop */
   font-size: 2rem;
   cursor: pointer;
   color: #1B8636;
@@ -5263,130 +5265,115 @@ footer {
   font-size: 1.5rem;
 }
 
-@media (max-width: 320px) {
+/* 💻 Para Laptop 1024 */
+@media (max-width: 1024px) {
   .menu-principal {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-  }
-  .header-logotipo {
-    width: 100%;
-    justify-content: center;
-  }
-  .logotipo {
-    width: 10rem;
-    height: 2rem;
-  }
-  .menu-icon {
-    display: block;
-  }
-  .navegacion {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-  }
-  #menu-toggle:checked ~ .navegacion {
     display: flex;
+    justify-content: space-around; /* Logo izquierda, hamburguesa derecha */
+    flex-wrap: wrap; /* Menú salta a nueva línea */
   }
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+  .navegacion, nav ul li a {
+    color: #222222;
+    display: flex;
+    padding: 0px;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
   }
-  nav ul li {
-    width: 100%;
-    text-align: center;
+  .boton-primario {
+    font-size: 2rem;
+    border: 3px solid #DDDDDD;
   }
-  .boton-primario,
   .boton-secundario {
-    width: 100%;
-    text-align: center;
-    display: block;
-  }
-  .hero-section {
-    min-height: 60vh;
-    padding: 1rem;
-    text-align: center;
+    font-size: 2rem;
+    border: 3px solid #DDDDDD;
   }
   .conteiner-hero {
-    margin-left: 0;
+    margin-left: 8rem;
+  }
+  .benefits {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .call-to-action {
+    padding: 3rem 8%;
+  }
+  footer {
+    padding: 3rem 8%;
+  }
+}
+/* 📱 Para Tablet */
+@media (max-width: 768px) {
+  .menu-principal {
+    display: flex;
+    align-items: center; /* ✅ Agregado */
+    padding: 1.4rem 0;
+    width: 100%;
+    position: relative; /* ✅ Agregado para la hamburguesa */
+    flex-wrap: wrap; /* ✅ Agregado para que el menú salte de línea */
+    gap: 2rem;
+  }
+  .logotipo {
+    width: 12rem;
+    height: auto;
+  }
+  .navegacion {
+    display: none; /* ✅ Oculto por defecto */
+    width: 100%;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #E6F2EA; /* ✅ Fondo verde */
+    border-top: 1px solid #DDDDDD;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .boton-primario,
+  .boton-secundario {
+    width: 80%;
+    text-align: center;
   }
   .hero-section h1 {
-    font-size: 1.5rem;
-    line-height: 1.3;
+    font-size: 1.75rem;
   }
   .hero-section p {
-    font-size: 0.875rem;
-    margin: 1rem 0;
+    font-size: 1.25rem;
   }
-  .boton-terciario {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-    width: 100%;
+  .conteiner-hero {
+    margin-left: 0;
     text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  .boton {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-    width: 100%;
-    text-align: center;
-    display: block;
-  }
-  .why-choose-us {
-    padding: 2rem 1rem;
-  }
-  .why-choose-us h2 {
-    font-size: 1.5rem;
-  }
-  .why-choose-us p {
-    font-size: 0.875rem;
-    max-width: 100%;
+    padding: 0 1rem;
   }
   .benefits {
     grid-template-columns: 1fr;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
   .benefits-text {
     margin: 0;
-  }
-  .benefits-text h2 {
-    font-size: 1.5rem;
-    padding-top: 0;
     text-align: center;
   }
+  /* Benefits en 2 columnas y 2 filas */
   .benefits-cards {
-    grid-template-columns: 1fr;
-    margin: 1rem 0;
-    gap: 1rem;
-  }
-  .card {
-    padding: 1.5rem;
-  }
-  .card i {
-    font-size: 2rem;
-  }
-  .card h3 {
-    font-size: 1rem;
-  }
-  .card p {
-    font-size: 0.875rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 1.5rem 0 0 0;
+    gap: 1.25rem;
   }
   .partners {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
   .partners-text {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
   .marcas {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
+    justify-content: center;
   }
   .marcas img {
     height: 40px;
@@ -5395,77 +5382,79 @@ footer {
     padding: 2rem 1rem;
   }
   .how-to-start h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
   .steps {
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
   }
   .step {
     width: 100%;
-  }
-  .steps i {
-    font-size: 2.5rem;
-  }
-  .step h3 {
-    font-size: 1rem;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
   }
   .call-to-action {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 5%;
+    text-align: center;
     gap: 1.5rem;
   }
   .call-to-action-text {
     max-width: 100%;
     text-align: center;
   }
-  .call-to-action h2 {
-    font-size: 1.5rem;
-  }
-  .call-to-action p {
-    font-size: 0.875rem;
-  }
   .call-to-action-button {
     flex-direction: column;
     width: 100%;
+    max-width: 300px;
   }
   .call-to-action-button a {
     width: 100%;
     text-align: center;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
   }
   footer {
-    padding: 2rem 1rem;
+    padding: 2rem 5%;
   }
   .footer-top {
     flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
     text-align: center;
   }
-  .footer-top .logotipo {
-    margin-bottom: 1rem;
-  }
   .footer-top nav ul {
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .footer-social-media {
-    gap: 1.5rem;
-  }
-  .footer-social-media i {
-    font-size: 1.75rem;
+    justify-content: center;
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     text-align: center;
-    font-size: 0.75rem;
   }
-  .footer-bottom p {
-    line-height: 1.5;
+}
+/* 📱 Responsive iPad */
+@media (max-width: 1024px) {
+  .menu-icon {
+    display: block;
+  }
+  .navegacion {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #E6F2EA;
+    width: 100%;
+    padding: 1rem;
+    border-top: 1px solid #DDDDDD;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #menu-toggle:checked ~ .navegacion {
+    display: flex;
   }
 }
 @media (max-width: 426px) {
@@ -5686,70 +5675,130 @@ footer {
     line-height: 1.5;
   }
 }
-/* 📱 Para Tablet */
-@media (max-width: 768px) {
+@media (max-width: 320px) {
   .menu-principal {
     flex-direction: column;
-    padding: 0 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .header-logotipo {
+    width: 100%;
+    justify-content: center;
   }
   .logotipo {
-    width: 12rem;
-    height: auto;
+    width: 10rem;
+    height: 2rem;
+  }
+  .menu-icon {
+    display: block;
   }
   .navegacion {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    padding: 1.5rem 0;
+    gap: 1rem;
+  }
+  #menu-toggle:checked ~ .navegacion {
+    display: flex;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .boton-primario,
+  .boton-secundario {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .hero-section {
+    min-height: 60vh;
+    padding: 1rem;
+    text-align: center;
+  }
+  .conteiner-hero {
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  nav ul {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .boton-primario,
-  .boton-secundario {
-    width: 80%;
-    text-align: center;
-  }
   .hero-section h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
   .hero-section p {
-    font-size: 1.25rem;
+    font-size: 0.875rem;
+    margin: 1rem 0;
   }
-  .conteiner-hero {
-    margin-left: 0;
+  .boton-terciario {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    width: 100%;
     text-align: center;
-    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .boton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .why-choose-us {
+    padding: 2rem 1rem;
+  }
+  .why-choose-us h2 {
+    font-size: 1.5rem;
+  }
+  .why-choose-us p {
+    font-size: 0.875rem;
+    max-width: 100%;
   }
   .benefits {
     grid-template-columns: 1fr;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
   .benefits-text {
     margin: 0;
+  }
+  .benefits-text h2 {
+    font-size: 1.5rem;
+    padding-top: 0;
     text-align: center;
   }
-  /* Benefits en 2 columnas y 2 filas */
   .benefits-cards {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    margin: 1.5rem 0 0 0;
-    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+    gap: 1rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  .card i {
+    font-size: 2rem;
+  }
+  .card h3 {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 0.875rem;
   }
   .partners {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
   .partners-text {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
   .marcas {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
-    justify-content: center;
   }
   .marcas img {
     height: 40px;
@@ -5758,79 +5807,77 @@ footer {
     padding: 2rem 1rem;
   }
   .how-to-start h2 {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .steps {
     flex-direction: column;
-    align-items: center;
+    gap: 2rem;
   }
   .step {
     width: 100%;
-    max-width: 400px;
-    margin-bottom: 1.5rem;
+  }
+  .steps i {
+    font-size: 2.5rem;
+  }
+  .step h3 {
+    font-size: 1rem;
   }
   .call-to-action {
     flex-direction: column;
-    padding: 2rem 5%;
-    text-align: center;
+    padding: 2rem 1rem;
     gap: 1.5rem;
   }
   .call-to-action-text {
     max-width: 100%;
     text-align: center;
   }
+  .call-to-action h2 {
+    font-size: 1.5rem;
+  }
+  .call-to-action p {
+    font-size: 0.875rem;
+  }
   .call-to-action-button {
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
   }
   .call-to-action-button a {
     width: 100%;
     text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
   }
   footer {
-    padding: 2rem 5%;
+    padding: 2rem 1rem;
   }
   .footer-top {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
     text-align: center;
   }
+  .footer-top .logotipo {
+    margin-bottom: 1rem;
+  }
   .footer-top nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
   }
   .footer-social-media {
-    justify-content: center;
+    gap: 1.5rem;
+  }
+  .footer-social-media i {
+    font-size: 1.75rem;
   }
   .footer-bottom {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     text-align: center;
+    font-size: 0.75rem;
   }
-}
-/* 📱 Responsive iPad */
-@media (max-width: 1024px) {
-  .menu-icon {
-    display: block;
-  }
-  .navegacion {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    background: #FFFFFF;
-    width: 100%;
-    padding: 1rem;
-    border-top: 1px solid #DDDDDD;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  #menu-toggle:checked ~ .navegacion {
-    display: flex;
+  .footer-bottom p {
+    line-height: 1.5;
   }
 }
 

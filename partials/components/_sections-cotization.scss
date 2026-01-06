@@ -39,8 +39,12 @@
 
 /* HERO COTIZACIÓN */
 .hero-cotizacion {
-    background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);
-    padding: 4rem 10%;
+        background: linear-gradient(rgba(27, 134, 54, 0.404), rgba(27, 134, 54, 0.85)), 
+                url('../../assets/img/cta_car_action1.jpg');
+    /* background: linear-gradient(135deg, #1B8636 0%, #15692a 100%);*/
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 3rem;
     text-align: center;
     color: $colorPrincipalBlanco;
 }
