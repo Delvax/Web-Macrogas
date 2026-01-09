@@ -1,4 +1,7 @@
+@use "sass:color";
+@use "sass:map";
 @use  "../utilities/variables" as *;
+@use  "../utilities/maps" as *;
 @use  "../base/tipografias" as *;
 
 /*
@@ -233,7 +236,7 @@
 }
 
 .boton-submit-cotizacion:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: color.scale(map.get($colores, verde), $lightness: -10%);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(27, 134, 54, 0.3);
 }
@@ -463,7 +466,7 @@
 }
 
 .boton-cotizar-precio:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: color.scale(map.get($colores, verde), $lightness: -10%);
     transform: translateY(-2px);
 }
 
@@ -472,7 +475,7 @@
 }
 
 .boton-promocion:hover {
-    background-color: darken($colorPrincipalRojo, 10%);
+    background-color: color.scale(map.get($colores, rojo), $lightness: 10%);
 }
 
 .precios-nota {
@@ -764,7 +767,7 @@
 }
 
 .boton-cta-final-form:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: color.scale(map.get($colores, verde), $lightness: -10%);
 }
 
 .urgencia-mensaje {

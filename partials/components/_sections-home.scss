@@ -1,237 +1,907 @@
-@use    "sass:map";
-@use    "../utilities/variables" as*;
-@use    "../utilities/maps" as*;
-@use    "../base/tipografias" as*;
-/*
-    #################################################################################################
-    #                                                                                               #
-    #                                              M A I N                                          #
-    #                                        SECTION - WHY CHOOSE                                   #
-    #                                                                                               #
-    #################################################################################################
-*/
+@use "sass:color";
+@use "sass:map";
+@use "../utilities/variables" as*;
+@use "../utilities/maps" as*;
+@use "../base/tipografias" as*;
 
-.why-choose-us {
-    background-color: map.get($colores, fondo-gris);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 3rem 1rem;
+
+// ============================================
+// 2. SERVICIOS STRIP
+// ============================================
+
+.servicios-strip {
+    background-color: var(--color-fondo-seccion-gris);
+    padding: 4rem 2rem;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-principal-negro);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-texto-oscuro);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .servicio-card {
+        background: var(--color-principal-blanco);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid green;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .servicio-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: var(--color-fondo-seccion-gris);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &:hover .servicio-image img {
+            transform: scale(1.1);
+        }
+
+        .servicio-content {
+            padding: 1.5rem;
+
+            h3 {
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: var(--color-principal-negro);
+            }
+
+            p {
+                color: var(--color-texto-oscuro);
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .boton-ver-mas {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        border: 2px solid #1b8636;
+        background: var(--color-principal-verde);
+        color: map.get($colores, negro);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+        
+
+        &:hover {
+            background: color.scale(map.get($colores, verde), $lightness: -10%);
+            color: map.get($colores, texto-claro);
+            box-shadow: 10px 5px 5px map.get($colores, fondo-verde-claro);
+        }
+    }
 }
+// ============================================
+// 3. PRUEBA SOCIAL
+// ============================================
 
-.why-choose-us h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-}
-
-.why-choose-us p {
-    max-width: 80ch; 
-    line-height: 1.5;
-}
-
-/*
-    #################################################################################################
-    #                                                                                               #
-    #                                              M A I N                                          #
-    #                                        SECTION - BENEFITS                                     #
-    #                                                                                               #
-    #################################################################################################
-*/
-
-
-.benefits{
+.prueba-social {
     background-color: map.get($colores, fondo-verde-claro);
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Izquierda pequeña, derecha más grande */
-    gap: 20px; /* Espacio entre columnas */
-    padding: 20px;
-    padding-left: 15rem;
-    padding-right: 15rem;
+    padding: 4rem 2rem;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-principal-negro);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-texto-oscuro);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .testimonios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .testimonio-card {
+        background: #f7f6f2;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonio-image {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+
+            img {
+                
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // ← Mantiene proporción sin estirar
+                object-position:top; // ← Centra la imagen (opcional)
+
+            }
+        }
+
+        .testimonio-content {
+            padding: 1.5rem;
+
+            .rating {
+                display: flex;
+                gap: 0.3rem;
+                margin-bottom: 1rem;
+
+                i {
+                    color: #FFD700;
+                    font-size: 1rem;
+                }
+            }
+
+            .testimonio-quote {
+                font-style: italic;
+                color: var(--color-texto-oscuro);
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+
+            .testimonio-autor {
+                font-size: 0.95rem;
+                color: var(--color-principal-negro);
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .boton-ver-mas {
+        display: inline-block;
+        padding: 0.75rem 2rem;
+        border: 2px solid #1b8636;
+        background: var(--color-principal-verde);
+        color: map.get($colores, negro);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+        
+
+        &:hover {
+            background: color.scale(map.get($colores, verde), $lightness: -10%);
+            color: map.get($colores, texto-claro);
+            box-shadow: 10px 5px 5px map.get($colores, fondo-verde-claro);
+        }
+    }
 }
-.benefits-text{
-    display: grid;
-    font-size: 1.2rem;
-    margin: 1.2rem;
+
+
+// ============================================
+// 4. EQUIPOS SHOWCASE
+// ============================================
+
+.equipos-showcase {
+    background-color: var(--color-principal-blanco);
+    padding: 4rem 2rem;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-principal-negro);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-texto-oscuro);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .equipos-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        
+    }
+
+    .equipo-card {
+        background: var(--color-fondo-seccion-gris);
+        border-radius: 16px;
+        padding: 2rem;
+        position: relative;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid green;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        &.destacado {
+            border: 1px solid green;
+        }
+
+        .badge-recomendado {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: map.get($colores, verde);
+            color: map.get($colores, blanco);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+            z-index: 10;
+        }
+
+        .equipo-image {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: var(--color-principal-blanco);
+            border-radius: 12px;
+            padding: 1rem;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .marcas-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+
+            .marca-tab {
+                padding: 0.4rem 1rem;
+                border-radius: 2rem;
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+
+                &.marca-axis {
+                    background: #F37427;
+                }
+
+                &.marca-landirenzo {
+                    background: #08399B;
+                }
+
+                &.marca-ta {
+                    background: #0B83C1;
+                }
+
+                &.marca-pelmag {
+                    background: #321679;
+                }
+                &.marca-aiv {
+                    background: #FCB12D;
+                }
+            }
+        }
+
+        .equipo-info {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                color: var(--color-principal-negro);
+            }
+
+            .equipo-subtitulo {
+                font-size: 1.1rem;
+                color: var(--color-principal-verde);
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .equipo-descripcion {
+                color: var(--color-texto-oscuro);
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+            }
+
+            .equipo-features {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    color: var(--color-texto-oscuro);
+                    
+                    
+
+                    i {
+                        color: white;
+                        font-size: 1rem;
+                        padding: 0.3rem;
+                        border-radius: 50%;
+                        background-color: green;
+                        
+                    }
+                }
+            }
+        }
+
+        .equipo-actions {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                flex: 1;
+                text-align: center;
+                padding: 0.75rem 1rem;
+                border-radius: 3rem;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+            .btn-cotizar {
+                background: map.get($colores, verde);
+                color: map.get($colores, blanco);
+                border: 2px solid map.get($colores, borde-claro);
+
+                &:hover {
+                    background: color.scale(map.get($colores, blanco));
+                    border-color: color.scale(map.get($colores, verde), $lightness: -10%);
+                    color: map.get($colores, verde);
+                }
+            }
+
+            .btn-detalles {
+                background: transparent;
+                color: var(--color-principal-verde);
+                border: 1px solid map.get($colores, borde-claro);
+
+                &:hover {
+                    background: var(--color-principal-verde);
+                    color: map.get($colores, verde);
+                }
+            }
+        }
+    }
 }
 
-.benefits-text h2{
-    font-weight: 400;
-    padding-top: 1.8rem;
+// Animación pulse para badges
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(27, 134, 54, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(27, 134, 54, 0);
+    }
 }
 
-/* Columna derecha con las tarjetas */
-.benefits-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columnas */
-    grid-template-rows: auto auto; /* 2 filas */
-    gap: 15px; /* Espacio entre tarjetas */
-    margin: 2rem;
-    font-weight:400;
-}
+// ============================================
+// 5. CILINDROS SHOWCASE
+// ============================================
 
-/* Estilo de cada tarjeta */
-.card {
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.card i {
-    font-size: 2rem;
-    color: map.get($colores, titulo);
-    margin-bottom: 10px;
-    display: block;
-    color: $colorPrincipalVerde;
-}
-
-/*
-    #################################################################################################
-    #                                                                                               #
-    #                                              M A I N                                          #
-    #                                        SECTION - PARTNERS                                     #
-    #                                                                                               #
-    #################################################################################################
-*/
-
-.partners{
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/Blog05.jpg'); */
-    background-color: map.get($colores, fondo-gris);
-    background-size: cover;
-    background-position:top;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    /* height: 400px; */
-}
-
-.partners-text{
-    color: map.get($colores, titulo);
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-    font-weight: 700;
-}
-
-.marcas{
-    display: flex;
-    justify-content: space-evenly;
-    text-decoration: none;
-}
-
-.marcas img{
-    width:auto;
-    height: 50px;    
-}
-
-/*
-    #################################################################################################
-    #                                                                                               #
-    #                                              M A I N                                          #
-    #                                        SECTION - HOW TO START                                 #
-    #                                                                                               #
-    #################################################################################################
-*/
-
-.how-to-start{
+.cilindros-showcase {
     background-color: map.get($colores, fondo-rosa-claro);
-    padding: 2.5rem 1rem 3rem 1rem; /* Agregamos padding para un mejor espacio en móvil */
+    padding: 4rem 2rem;
+
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-principal-negro);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-texto-oscuro);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .cilindros-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .cilindro-card {
+        background: map.get($colores, blanco);
+        border: 1px solid red;
+        border-radius: 16px;
+        padding: 2rem;
+        position: relative;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        &.destacado {
+            border: 1px solid red;
+        }
+
+        .badge-elegido {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: map.get($colores, verde);
+            color: map.get($colores, blanco);
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+            z-index: 10;
+        }
+
+        .cilindro-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;    
+            }
+        }
+
+        .cilindro-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+
+            .cilindro-tab {
+                padding: 0.4rem 0.9rem;
+                border-radius: 2rem;
+                font-size: 0.7rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: white;
+
+                &.tab-ciudad,
+                &.tab-compacto,
+                &.tab-economico {
+                    background: #7000DF;
+                }
+
+                &.tab-viaje,
+                &.tab-popular,
+                &.tab-balanceado {
+                    background: #1da154;
+                }
+
+                &.tab-ruta,
+                &.tab-autonomia,
+                &.tab-profesional {
+                    background: #005BB8;
+                }
+            }
+        }
+
+        .cilindro-info {
+            margin-bottom: 1.5rem;
+
+            h3 {
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                color: var(--color-principal-negro);
+            }
+
+            .cilindro-subtitulo {
+                font-size: 1rem;
+                color: var(--color-principal-verde);
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .cilindro-descripcion {
+                color: var(--color-texto-oscuro);
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .cilindro-features {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-bottom: 0.75rem;
+                    color: var(--color-texto-oscuro);
+                    font-size: 0.9rem;
+
+                    i {
+                        color: white;
+                        font-size: 1rem;
+                        padding: 0.3rem;
+                        border-radius: 50%;
+                        background-color: green;
+                    }
+                }
+            }
+        }
+
+        .cilindro-actions {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                flex: 1;
+                text-align: center;
+                padding: 0.75rem 1rem;
+                border-radius: 3rem;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+            }
+
+            .btn-cotizar {
+                background: map.get($colores, verde);
+                color: map.get($colores, blanco);
+                border: 2px solid map.get($colores, borde-claro);
+                padding:1rem 1rem;
+
+                &:hover {
+                    background: color.scale(map.get($colores, blanco));
+                    border-color: color.scale(map.get($colores, verde), $lightness: -10%);
+                    color: map.get($colores, verde);
+                }
+            }
+
+            .btn-detalles {
+                background: transparent;
+                color: var(--color-principal-verde);
+                border: 1px solid map.get($colores, borde-claro);
+                padding:1rem 1px;
+
+                &:hover {
+                    background: var(--color-principal-verde);
+                    color: map.get($colores, verde);
+                }
+            }
+        }
+    }
+
+    .boton-ver-mas {
+display: inline-block;
+        padding: 0.75rem 2rem;
+        border: 2px solid #1b8636;
+        background: var(--color-principal-verde);
+        color: map.get($colores, negro);
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+        &:hover {
+            background: color.scale(map.get($colores, verde), $lightness: -10%);
+            color: map.get($colores, blanco);
+        }
+    }
 }
 
-.how-to-start h2{
-    color: map.get($colores, titulo);
-    font-size: 2rem;
-    text-align: center; 
-    margin-bottom: 2.5rem;
-    font-weight: 700;
+// ============================================
+// 6. MARQUEE DOBLE
+// ============================================
+
+.marquee-doble {
+    background-color: var(--color-principal-blanco);
+    padding: 4rem 2rem;
+    overflow: hidden;
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-principal-negro);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        color: var(--color-texto-oscuro);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .marquee-wrapper {
+        margin-bottom: 2rem;
+        background: var(--color-fondo-seccion-gris);
+        border-radius: 12px;
+        padding: 1.5rem;
+        overflow: hidden;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .marquee-label {
+            text-align: center;
+            font-weight: 600;
+            // color: map.get($colores, verde);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+
+
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            &.marquee-left {
+                animation: scrollLeft 7s linear infinite;
+            }
+
+            &.marquee-right {
+                animation: scrollRight 7s linear infinite;
+            }
+
+            .marquee-item {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 70px;
+                    width: auto;
+                    object-fit: contain;
+                    // filter: grayscale(100%);
+                    opacity: 9;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        filter: grayscale(0%);
+                        opacity: 1;
+                    }
+                }
+
+                &.marquee-text {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: var(--color-texto-oscuro);
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
 }
 
-.steps{
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Agregamos espacio entre las columnas */
-    flex-wrap: wrap; 
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
-.step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+// ============================================
+// 7. CTA FINAL
+// ============================================
+
+.cta-final {
+    background-color: map.get($colores, rojo);
+    // background-image: url('../../assets/img/flota-productos.png');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size:auto;
+    // opacity: 0.7;
+    padding: 5rem 2rem;
     text-align: center;
-    gap: 1rem;
-    width: 350px; 
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: map.get($colores, fondo-rosa-claro);
+    }
+
+    .cta-subtitle {
+        font-size: 1.2rem;
+        color: map.get($colores, blanco);
+        margin-bottom: 3rem;
+    }
+
+    .proceso-iconos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .proceso-item {
+        .proceso-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            color: map.get($colores, fondo-rosa-claro);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+
+            i {
+                font-size: 2.5rem;
+                color: var(--color-principal-blanco);
+                border: 2px dashed pink;
+                border-radius: 50%;
+                padding: 1rem;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: map.get($colores, fondo-rosa-claro);
+        }
+
+        p {
+            color: map.get($colores, fondo-rosa-claro);
+        }
+    }
+
+    .boton-cta-principal {
+        display: inline-block;
+        padding: 1rem 3rem;
+        background: map.get($colores, fondo-rosa-claro);
+        color: var(--color-principal-blanco);
+        text-decoration: none;
+        border-radius: 3rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px pink;
+
+        &:hover {
+            color: white;
+            background: color.scale(map.get($colores, rojo), $lightness: -10%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px pink;
+        }
+    }
+
+    .urgencia-text {
+        margin-top: 1rem;
+        color: map.get($colores, blanco);
+        font-weight: 600;
+        font-size: 1rem;
+    }
 }
 
-.steps i{  
-    font-size: 3rem;
-    color: map.get($colores, texto-oscuro);
-}
-
-.step h3{ 
-    font-weight: 500;
-}
-
-/*
-    #################################################################################################
-    #                                                                                               #
-    #                                              M A I N                                          #
-    #                                      SECTION - CALL TO ACTION                                 #
-    #                                                                                               #
-    #################################################################################################
-*/
-
-
-.call-to-action {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    
-    padding: 3rem 15%; 
-    background-color: map.get($colores, fondo-gris); 
-}
-
-
-.call-to-action-text {
-    max-width: 50%;
-}
-
-.call-to-action h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.call-to-action p {
-    font-size: 1rem;
-    color: map.get($colores, texto-oscuro);
-}
-
-.call-to-action-button {
-    display: flex; 
-    gap: 1rem; 
-}
-
-
-.call-to-action-button a {
-    text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem; 
-    border-radius: 3rem;
-    border: 2px solid transparent;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-
-/* Botón de "Solicitar" o "Cotizar ahora!" */
-.call-to-action-button a:first-child {
-    background-color: map.get($colores, verde);
-    color: map.get($colores, blanco);
-}
-
-/* Botón de "Más información" */
-.call-to-action-button a:last-child {
-    background-color: transparent;
-    color: map.get($colores, texto-oscuro);
-    border-color: map.get($colores, borde-claro); 
-}

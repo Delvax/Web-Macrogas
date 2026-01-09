@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:color";
 @use "../utilities/variables" as*;
 @use "../utilities/maps" as*;
 @use "../base/tipografias" as*;
@@ -124,7 +125,7 @@
 }
 
 .contacto-link-whatsapp:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: map.get($colores, verde 10%);
     transform: scale(1.05);
 }
 
@@ -223,7 +224,7 @@
 }
 
 .boton-form-submit:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: map.get($colores, verde 10%);
     transform: translateY(-2px);
 }
 
@@ -282,7 +283,7 @@
 }
 
 .boton-mapa:hover {
-    background-color: darken($colorPrincipalVerde, 10%);
+    background-color: color.scale(map.get($colores, verde), $lightness: -20%);
 }
 
 .boton-mapa i {
@@ -325,7 +326,7 @@
 
 .horario-cerrado .dia,
 .horario-cerrado .hora {
-    color: lighten($colorTextoOscuro, 20%);
+    color: color.scale(map.get($colores, texto-oscuro), $lightness: 20%);
 }
 
 .horarios-nota {
@@ -384,7 +385,7 @@
 }
 
 .faq-question:hover {
-    background-color: darken($colorFondo-SeccionGrises, 5%);
+    background-color: color.scale(map.get($colores, fondo-gris), $lightness: -5%);
 }
 
 .faq-question h3 {
