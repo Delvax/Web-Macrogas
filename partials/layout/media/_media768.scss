@@ -59,85 +59,6 @@
         padding: 0 1rem;
     }
 
-    .benefits {
-        grid-template-columns: 1fr;
-        padding: 1.5rem 1rem;
-    }
-
-    .benefits-text {
-        margin: 0;
-        text-align: center;
-    }
-
-    /* Benefits en 2 columnas y 2 filas */
-    .benefits-cards {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        margin: 1.5rem 0 0 0;
-        gap: 1.25rem;
-    }
-
-    .partners {
-        padding: 1.5rem 1rem;
-    }
-
-    .partners-text {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .marcas {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        justify-content: center;
-    }
-
-    .marcas img {
-        height: 40px;
-    }
-
-    .how-to-start {
-        padding: 2rem 1rem;
-    }
-
-    .how-to-start h2 {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .steps {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .step {
-        width: 100%;
-        max-width: 400px;
-        margin-bottom: 1.5rem;
-    }
-
-    .call-to-action {
-        flex-direction: column;
-        padding: 2rem 5%;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .call-to-action-text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .call-to-action-button {
-        flex-direction: column;
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .call-to-action-button a {
-        width: 100%;
-        text-align: center;
-    }
 
     footer {
         padding: 2rem 5%;
@@ -331,6 +252,7 @@
             .marcas-tabs {
                 grid-column: 2;
                 grid-row: 2;
+                display:none;
             }
             
             // Info del equipo
@@ -339,6 +261,15 @@
                 grid-row: 3;
                 margin-bottom: 0;
             }
+
+            //Descripcion del equipo
+            .equipo-descripcion{
+                display:none;
+            }
+
+            .equipo-features li i{
+                margin-right: 0.5rem;
+            }
             
             // Botones
             .equipo-actions {
@@ -346,12 +277,15 @@
                 grid-row: 4;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: 0.75rem;
-                
+                                
                 a {
-                    width: 100%;
+                    width: 75%;
                 }
             }
+            
+
         }
     }
     
@@ -400,6 +334,7 @@
             .cilindro-tabs {
                 grid-column: 2;
                 grid-row: 2;
+                display:none;
             }
             
             // Info del cilindro
@@ -407,6 +342,11 @@
                 grid-column: 2;
                 grid-row: 3;
                 margin-bottom: 0;
+            }
+
+            //Descripcion
+            .cilindro-descripcion{
+                display:none;
             }
             
             // Botones
@@ -449,7 +389,7 @@
                 
                 .marquee-item {
                     img {
-                        height: 40px;
+                        height: 50px;
                     }
                 }
             }
@@ -472,7 +412,7 @@
         
         .proceso-iconos {
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            gap: 1rem;
         }
         
         .proceso-item {
