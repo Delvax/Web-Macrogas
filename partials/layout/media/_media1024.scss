@@ -59,3 +59,155 @@
     }
 }
 
+
+// ============================================
+// RESPONSIVE 1024px - TABLETS HORIZONTALES
+// iPad horizontal, laptops pequeñas
+// ============================================
+
+@media (max-width: 1024px) {    
+
+    // ============================================
+    // SERVICIOS - botones
+    // ============================================
+
+    .boton-secundario{
+
+
+    font-weight: 600;
+    margin: 7px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: #1B8636;
+    color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    }
+
+    .boton-primario{
+        font-size: 15px;
+    }
+
+    // ============================================
+    // SERVICIOS - GRID DE CARDS
+    // ============================================
+    
+    .servicios {
+        padding: 3rem 5%;
+        background-position: center center;
+    }
+    
+    .auto-imagen {
+        max-width: 700px;
+    }
+    
+    .servicios-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .servicios-header p {
+        font-size: 1.1rem;
+    }
+    
+    // Grid de 2 columnas en lugar de 3
+    .servicios-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .servicio-img {
+        height: 180px;
+    }
+    
+    .servicio-body {
+        padding: 1.25rem;
+    }
+    
+    .servicio-title {
+        font-size: 1.15rem;
+    }
+    
+    .servicio-text {
+        font-size: 0.9rem;
+    }
+    
+    // ============================================
+    // CARS SECTION - MODELOS
+    // ============================================
+    
+    .cars-section {
+        padding: 3rem 2rem;
+    }
+    
+    // Grid de 2 columnas en lugar de 3
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem 2rem;
+        max-width: 900px;
+    }
+    
+    .car-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .car-icon {
+        max-width: 220px;
+    }
+    
+    .car-name {
+        font-size: 1.4rem;
+    }
+    
+    // ============================================
+    // MARCAS SECTION
+    // ============================================
+    
+    .marcas-section {
+        padding: 3rem 5%;
+    }
+    
+    .marcas-titulo h2 {
+        font-size: 2.2rem;
+        padding: 0 1.5rem;
+    }
+    
+    // Grid de 6 columnas en lugar de 8
+    .marcas-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        max-width: 1200px;
+    }
+    
+    .marca-item {
+        min-height: 100px;
+        
+        img {
+            max-width: 140px;
+        }
+    }
+    
+    // ============================================
+    // CTA PRODUCTOS
+    // ============================================
+    
+    .cta-productos {
+        padding: 3rem 5%;
+        gap: 2rem;
+    }
+    
+    .cta-productos-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-productos-content p {
+        font-size: 1.3rem;
+    }
+    
+    .boton-cta-productos {
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
+    
+    .cta-productos-auto img {
+        max-width: 600px;
+    }
+}
